@@ -1,9 +1,12 @@
+{% liquid
+  render 'schema'
+  render 'nav-a11y'
+%}
+
 <header role="banner">
   <div class="container"></div>
 </header>
 
 {% schema %}
-  {
-    "name": "t:sections.header.name"
-  }
+  {"name": "Header"}
 {% endschema %}

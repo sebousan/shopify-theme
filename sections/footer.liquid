@@ -2,8 +2,13 @@
   <div class="container"></div>
 </footer>
 
+{% liquid
+  render 'footer-js'
+  render 'footer-scripts'
+%}
+
 {% schema %}
   {
-    "name": "t:sections.footer.name"
+    "name": "Footer"
   }
 {% endschema %}

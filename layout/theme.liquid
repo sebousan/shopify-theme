@@ -15,18 +15,10 @@
   </head>
 
   <body>
-    {% liquid
-      render 'schema'
-      render 'nav-a11y'
-      section 'header'
-    %}
-
-    {{ content_for_layout }}
-
-    {% liquid
-      section 'footer'
-      render 'footer-js'
-      render 'footer-scripts'
-    %}
+    {% section 'header' %}
+    <main id="main" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {% section 'footer' %}
   </body>
 </html>
