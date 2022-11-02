@@ -7,15 +7,26 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
+    {%- render 'head-css' -%}
     {%- render 'head-seo' -%}
     {%- render 'head-favicons' -%}
-    {%- render 'head-css' -%}
 
     {{ content_for_header }}
   </head>
 
   <body>
-    {%- render 'nav-a11y' -%}
+    {% liquid
+      render 'schema'
+      render 'nav-a11y'
+      section 'header'
+    %}
 
+    {{ content_for_layout }}
+
+    {% liquid
+      section 'footer'
+      render 'footer-js'
+      render 'footer-scripts'
+    %}
   </body>
 </html>

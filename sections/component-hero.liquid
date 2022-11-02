@@ -1,0 +1,50 @@
+{% liquid 
+  assign title = section.settings.title
+  assign text = section.settings.text
+  assign image = section.settings.image
+  assign ratio = section.settings.ratio
+
+  render 'hero'
+%}
+
+{{ image }}
+
+<div class="container">
+  <h1>{{ title }}</h1>
+  {% if text != '' %}
+    <p>{{ text }}</p>
+  {% endif %}
+  <code>{{ ratio }}</code>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero",
+    "class": "hero",
+    "tag": "header",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "label": "Texte"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "range",
+        "id": "ratio",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "%",
+        "label": "Taille du Hero (ratio)",
+        "default": 50
+      }
+    ]
+  }
+{% endschema %}

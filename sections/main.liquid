@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>
+    {{ page.title | escape }}
+  </h1>
+  <div class="rte">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.main.name",
+    "tag": "section"
+  }
+{% endschema %}

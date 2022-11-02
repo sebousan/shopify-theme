@@ -2,3 +2,6 @@ MatchingTranslations:
   enabled: false
 TemplateLength:
   enabled: false
+SchemaJsonFormat:
+  enabled: true
+  severity: style
