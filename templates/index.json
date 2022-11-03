@@ -1,10 +1,14 @@
 {
   "sections": {
-    "hero": {
-      "type": "hero"
+    "d8c52d8e-0f18-4282-a408-f477cd9bef8a": {
+      "type": "block-editorial",
+      "settings": {
+        "title": "Bloc editorial",
+        "text": "<p>Lorem ipsum<\/p>"
+      }
     }
   },
   "order": [
-    "hero"
+    "d8c52d8e-0f18-4282-a408-f477cd9bef8a"
   ]
 }
