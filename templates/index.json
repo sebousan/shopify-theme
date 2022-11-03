@@ -1,7 +1,7 @@
 {
   "sections": {
     "hero": {
-      "type": "component-hero"
+      "type": "hero"
     }
   },
   "order": [

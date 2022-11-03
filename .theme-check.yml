@@ -3,5 +3,5 @@ MatchingTranslations:
 TemplateLength:
   enabled: false
 SchemaJsonFormat:
-  enabled: true
-  severity: style
+  enabled: false
+  # severity: suggestion

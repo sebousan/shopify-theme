@@ -61,7 +61,10 @@
     "button_label": "S'inscrire"
   },
   "accessibility": {
-    "skip_to_text": "Ignorer et passer au contenu",
+    "skip_to_footer": "Passer en pied de page",
+    "skip_to_navigation": "Passer à la navigation",
+    "skip_to_text": "Passer au contenu",
+    "skip_to_product_info": "Skip to product information",
     "close": "Fermer",
     "unit_price_separator": "par",
     "vendor": "Distributeur :",
