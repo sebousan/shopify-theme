@@ -13,6 +13,8 @@
     <div class="media">
       {%- if media.media_type == 'image' -%}
         {%- render 'image', img: media, width: 300 -%}
+      {%- elsif media.media_type == 'video' -%}
+        {%- render 'video', video: media, width: 300 -%}
       {%- endif -%}
     </div>
   {%- endif -%}
