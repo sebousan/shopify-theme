@@ -12,7 +12,7 @@
   {%- if media -%}
     <div class="media">
       {%- if media.media_type == 'image' -%}
-        {%- render 'image' with media as img -%}
+        {%- render 'image', img: media -%}
       {%- endif -%}
     </div>
   {%- endif -%}
