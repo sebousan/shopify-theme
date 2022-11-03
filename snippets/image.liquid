@@ -4,5 +4,5 @@
 -%}
 
 <picture>
-  <img src="{{ img | image_url: width: 450 }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" loading="lazy">
+  <img src="{{ img.preview_image | image_url: width: width }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" loading="lazy">
 </picture>
