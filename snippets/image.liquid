@@ -1,6 +1,6 @@
 {%- liquid
   assign src = img.preview_image
-  assign width = width | default 450
+  assign width = width | default: 450
   assign height = width | divided_by: src.aspect_ratio | ceil
 -%}
 
