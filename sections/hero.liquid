@@ -1,11 +1,11 @@
-{% liquid 
+{%- liquid 
   assign title = section.settings.title
   assign text = section.settings.text
   assign image = section.settings.image
   assign ratio = section.settings.ratio
-%}
+-%}
 
-{{ image }}
+{% render 'image' with image as img %}
 
 <div class="container">
   <h1>{{ title }}</h1>
@@ -18,7 +18,7 @@
 {% schema %}
   {
     "name": "Hero",
-    "tag": "header",
+    "tag": "section",
     "class": "hero",
     "settings": [
       {
