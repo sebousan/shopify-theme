@@ -1,8 +1,10 @@
-{%- liquid
-  assign autoplay = autoplay | default: false
-  assign loop = loop | default: true
-  assign muted = muted | default: true
-  assign controls = controls | default: false
--%}
+<a href="" class="logo"></a>
+{%- assign logo = settings.header_logo -%}
 
-{{ video | video_tag: autoplay: autoplay, loop: loop, muted: muted, controls: controls }}
+<a class="logo" href="{{ shop.secure_url }}">
+  {%- if logo -%}
+    {{ logo | image_tag }}
+  {%- else -%}
+    {{ shop.name }}
+  {%- endif -%}
+</a>
