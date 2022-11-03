@@ -3,8 +3,9 @@
   assign ratio = ratio | default: src.aspect_ratio
   assign width = width | default: 450
   assign height = width | divided_by: ratio | ceil
+  assign crop = crop | default: 'center'
 -%}
 
 <picture>
-  <img src="{{ src | image_url: width: width, height: height }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" loading="lazy">
+  <img src="{{ src | image_url: width: width, height: height, crop: crop }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" loading="lazy">
 </picture>
