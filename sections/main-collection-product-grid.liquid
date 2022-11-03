@@ -1,0 +1,38 @@
+<div class="container">
+
+  {%- paginate collection.products by section.settings.products_per_page -%}
+
+    {%- if collection.products.size == 0 -%}
+      EMPTY
+    {%- else -%}
+
+      <div class="products">
+        {%- for product in collection.products -%}
+          {% render 'product-item'
+           , product_item: product
+           , media_aspect_ratio: section.settings.image_ratio
+           , show_secondary_image: section.settings.show_secondary_image
+           , show_vendor: section.settings.show_vendor
+           , show_rating: section.settings.show_rating
+           , show_quick_add: section.settings.enable_quick_add
+           , section_id: section.id
+           %}
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {% render 'pagination', paginate: paginate, anchor: '' %}
+      {%- endif -%}
+
+    {%- endif -%}
+
+  {%- endpaginate -%}
+
+</div>
+
+{% schema %}
+  {
+    "name": "Grille produits",
+    "tag": "section"
+  }
+{% endschema %}
