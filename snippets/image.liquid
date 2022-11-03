@@ -1,8 +1,9 @@
 {%- liquid
+  assign src = img.preview_image
   assign width = 400
-  assign height = width | divided_by: img.preview_image.aspect_ratio | ceil
+  assign height = width | divided_by: src.aspect_ratio | ceil
 -%}
 
 <picture>
-  <img src="{{ img.preview_image | image_url: width: width }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" loading="lazy">
+  <img src="{{ src | image_url: width: width }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" loading="lazy">
 </picture>
