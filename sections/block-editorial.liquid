@@ -1,14 +1,22 @@
+{% liquid 
+  assign title = section.settings.title
+  assign text = section.settings.text
+  assign image = section.settings.image
+%}
+
 <div class="container">
   <div class="row">
     <div class="content">
-      {%- if section.settings.title != blank -%}
-        <h2>{{ section.settings.title }}</h2>
+      {%- if title != blank -%}
+        <h2>{{ title }}</h2>
       {%- endif -%}
-      {%- if section.settings.text != blank -%}
-        <h2>{{ section.settings.text }}</h2>
+      {%- if text != blank -%}
+        <h2>{{ text }}</h2>
       {%- endif -%}
     </div>
-    <div class="media"></div>
+    <div class="media">
+      {{ image }}
+    </div>
   </div>
 </div>
 
@@ -26,6 +34,10 @@
         "type": "richtext",
         "id": "text",
         "label": "Texte"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
       }
     ],
     "presets": [
