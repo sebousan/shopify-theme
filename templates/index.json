@@ -6,9 +6,16 @@
         "title": "Bloc editorial",
         "text": "<p>Lorem ipsum<\/p>"
       }
+    },
+    "bbc10211-779f-471f-84e3-0e3044629e25": {
+      "type": "block-title",
+      "settings": {
+        "title": "Bloc titre"
+      }
     }
   },
   "order": [
-    "d8c52d8e-0f18-4282-a408-f477cd9bef8a"
+    "d8c52d8e-0f18-4282-a408-f477cd9bef8a",
+    "bbc10211-779f-471f-84e3-0e3044629e25"
   ]
 }
