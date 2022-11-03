@@ -5,8 +5,9 @@
   assign height = width | divided_by: ratio | ceil
   assign crop = crop | default: 'center'
   assign lazy = lazy | default: true
+  assign img_class = img_class | default: false
 -%}
 
 <picture>
-  <img src="{{ src | image_url: width: width, height: height, crop: crop }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" {% if lazy %} loading="lazy"{% endif %}>
+  <img src="{{ src | image_url: width: width, height: height, crop: crop }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" {% if lazy %} loading="lazy"{% endif %} {% if img_class %} class="{{ img_class }}"{% endif %}>
 </picture>
