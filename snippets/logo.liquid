@@ -1,0 +1,9 @@
+{%- assign logo = settings.header_logo -%}
+
+<a class="logo" href="{{ shop.secure_url }}">
+  {%- if logo -%}
+    <img src="{{ logo | img_url }}" alt="{{ shop.name }}">
+  {%- else -%}
+    {{ shop.name }}
+  {%- endif -%}
+</a>

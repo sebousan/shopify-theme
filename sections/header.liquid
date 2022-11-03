@@ -5,7 +5,7 @@
 
 <header role="banner">
   <div class="container">
-    Header
+    {%- render 'logo' -%}
     {%- if section.settings.menu != blank -%}
       {% render 'nav', menu: section.settings.menu.links %}
     {%- endif -%}

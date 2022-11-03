@@ -1,6 +1,6 @@
 <footer role="contentinfo">
   <div class="container">
-    Footer
+    {%- render 'logo' -%}
     {%- if section.settings.menu != blank -%}
       {% render 'nav', menu: section.settings.menu.links %}
     {%- endif -%}
