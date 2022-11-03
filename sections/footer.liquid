@@ -1,6 +1,16 @@
 <footer role="contentinfo">
   <div class="container">
     Footer
+    {%- if section.settings.menu != blank -%}
+      {% render 'nav', menu: section.settings.menu.links %}
+    {%- endif -%}
+    <hr>
+    {%- if section.settings.menu_legal != blank -%}
+      {% render 'nav', menu: section.settings.menu_legal.links %}
+    {%- endif -%}
+    {%- if section.settings.menu_social != blank -%}
+      {% render 'nav', menu: section.settings.menu_social.links %}
+    {%- endif -%}
   </div>
 </footer>
 
