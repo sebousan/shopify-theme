@@ -12,7 +12,7 @@
   {%- if media -%}
     <div class="media">
       {%- if media.media_type == 'image' -%}
-        {%- render 'image', img: media, width: 300, mobile_width: 200, ratio: 1 -%}
+        {%- render 'image', img: media, width: 300, lazy: false -%}
       {%- endif -%}
     </div>
   {%- endif -%}
