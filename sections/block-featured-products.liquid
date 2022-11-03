@@ -1,9 +1,11 @@
 {% liquid 
   assign title = section.settings.title
   assign text = section.settings.text
+  assign products = section.settings.product_list
 %}
 
 <div class="container">
+
   {%- if title != blank or text != blank -%}
     <header class="heading">
       {%- if title != blank -%}
@@ -14,9 +16,15 @@
       {%- endif -%}
     </header>
   {%- endif -%}
-  <div class="products">
-    {% render 'product-item' with product as product_item %}
-  </div>
+
+  {%- if products != blank -%}
+    <div class="products">
+      {%- for product in products -%}
+        {% render 'product-item' with product as product_item %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
 </div>
 
 {% schema %}
