@@ -1,0 +1,12 @@
+<nav role="navigation">
+  <ul>
+    {%- for link in menu -%}
+      <a href="{{ link.url }}" {% if link.current %}
+        class="active"
+        aria-current="page"
+        {% endif %}>
+        {{ link.title | escape }}
+      </a>
+    {%- endfor -%}
+  </ul>
+</nav>

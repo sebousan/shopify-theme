@@ -6,9 +6,21 @@
 <header role="banner">
   <div class="container">
     Header
+    {%- if section.settings.menu != blank -%}
+      {% render 'nav', menu: section.settings.menu.links %}
+    {%- endif -%}
   </div>
 </header>
 
 {% schema %}
-  {"name": "Header"}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu principal"
+      }
+    ]
+  }
 {% endschema %}
