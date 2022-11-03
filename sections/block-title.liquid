@@ -1,0 +1,29 @@
+{% liquid 
+  assign title = section.settings.title
+%}
+
+{%- if title != blank -%}
+  <div class="container">
+    <h2>{{ title }}</h2>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Titre",
+    "tag": "section",
+    "class": "block-title",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Titre"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Titre"
+      }
+    ]
+  }
+{% endschema %}

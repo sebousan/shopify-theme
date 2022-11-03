@@ -1,0 +1,69 @@
+{% liquid 
+  assign title = section.settings.title
+  assign text = section.settings.text
+%}
+
+<div class="container">
+  <div class="heading">
+    {%- if title != blank -%}
+      <h2>{{ title }}</h2>
+    {%- endif -%}
+    {%- if text != blank -%}
+      <p>{{ text }}</p>
+    {%- endif -%}
+  </div>
+  <div class="products">
+    {% render 'product-item'
+     , card_product: product
+     , show_vendor: section.settings.show_vendor
+     , show_rating: section.settings.show_rating
+     , show_quick_add: section.settings.enable_quick_add
+     , section_id: section.id
+     %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Produits",
+    "tag": "section",
+    "class": "block-products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Titre"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "label": "Texte"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Produit",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "product_picker",
+            "id": "product",
+            "label": "Produit"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Produits",
+        "blocks": [
+          {
+            "type": "product"
+          }, {
+            "type": "product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
