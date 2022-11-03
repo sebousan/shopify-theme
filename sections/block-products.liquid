@@ -4,17 +4,19 @@
 %}
 
 <div class="container">
-  <div class="heading">
-    {%- if title != blank -%}
-      <h2>{{ title }}</h2>
-    {%- endif -%}
-    {%- if text != blank -%}
-      <p>{{ text }}</p>
-    {%- endif -%}
-  </div>
+  {%- if title != blank or text != blank -%}
+    <header class="heading">
+      {%- if title != blank -%}
+        <h2>{{ title }}</h2>
+      {%- endif -%}
+      {%- if text != blank -%}
+        <p>{{ text }}</p>
+      {%- endif -%}
+    </header>
+  {%- endif -%}
   <div class="products">
     {% render 'product-item'
-     , card_product: product
+     , product_item: product
      , show_vendor: section.settings.show_vendor
      , show_rating: section.settings.show_rating
      , show_quick_add: section.settings.enable_quick_add
@@ -25,7 +27,7 @@
 
 {% schema %}
   {
-    "name": "Produits",
+    "name": "Produits sélectionnés",
     "tag": "section",
     "class": "block-products",
     "settings": [
@@ -39,11 +41,11 @@
         "label": "Texte"
       }
     ],
+    "max_blocks": 4,
     "blocks": [
       {
-        "type": "product",
+        "type": "item",
         "name": "Produit",
-        "limit": 4,
         "settings": [
           {
             "type": "product_picker",
@@ -55,12 +57,12 @@
     ],
     "presets": [
       {
-        "name": "Produits",
+        "name": "Produits sélectionnés",
         "blocks": [
           {
-            "type": "product"
+            "type": "item"
           }, {
-            "type": "product"
+            "type": "item"
           }
         ]
       }
