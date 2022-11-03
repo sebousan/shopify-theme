@@ -1,14 +1,17 @@
-{%- assign p = product_item -%}
+{%- liquid
+  assign p = product_item
+  assign media = p.featured_media 
+-%}
 <article class="product">
   <div class="content">
     <p class="title">
       <a href="{{ p.url }}">{{ p.title | escape }}</a>
     </p>
-    <p class="description">{{ p.description }}</p>
+    <p class="description">{{ p.description | escape }}</p>
   </div>
-  {%- if p.featured_media -%}
+  {%- if media -%}
     <div class="media">
-      {{ p.featured_media | image_url }}
+      {%- render 'image' width media as img -%}
     </div>
   {%- endif -%}
 </article>
