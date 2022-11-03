@@ -2,3 +2,7 @@ development:
   password: shptka_61df23af22e2f8dd0ab38af530622f7a
   theme_id: "122468958285"
   store: sebousan-tech.myshopify.com
+production:
+  password: shptka_61df23af22e2f8dd0ab38af530622f7a
+  theme_id: "122468958285"
+  store: sebousan-tech.myshopify.com
