@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="content">
+      {%- if section.settings.title != blank -%}
+        <h2>{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <h2>{{ section.settings.text }}</h2>
+      {%- endif -%}
+    </div>
+    <div class="media"></div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Editorial",
+    "tag": "section",
+    "class": "block-editorial",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Titre"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "label": "Texte"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Editorial"
+      }
+    ]
+  }
+{% endschema %}
