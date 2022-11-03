@@ -1,4 +1,15 @@
 {
   "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }
