@@ -12,12 +12,14 @@
   assign mobile_width = mobile_width | default: false
   if mobile_width != false
     assign mobile_height = mobile_width | divided_by: ratio | ceil
+    assign mobile_width_x2 = mobile_width | times: 2
+    assign mobile_height_x2 = mobile_height | times: 2
   endif
 -%}
 
 <picture {% if picture_class %}class="{{ picture_class }}"{% endif %}>
   {%- if mobile_width -%}
-    <source srcset="{{ src | image_url: width: mobile_width, height: mobile_height, crop: crop }}, {{ src | image_url: width: mobile_width, height: mobile_height, crop: crop, scale: 2 }} x2" type="image/jpg" media="(max-width: 576px)">
+    <source srcset="{{ src | image_url: width: mobile_width, height: mobile_height, crop: crop }}, {{ src | image_url: width: mobile_width_x2, height: mobile_height_x2, crop: crop }} x2" type="image/jpg" media="(max-width: 576px)">
   {%- endif -%}
   <img src="{{ src | image_url: width: width, height: height, crop: crop }}" width="{{ width }}" height="{{ height }}" alt="{{ img.alt | escape }}" {% if lazy %} loading="lazy"{% endif %} {% if img_class %} class="{{ img_class }}"{% endif %}>
 </picture>
