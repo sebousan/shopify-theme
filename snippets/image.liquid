@@ -1,3 +1,4 @@
+{{ img.preview_image }}
 <picture>
   <img src="{{ img | image_url: width: 450 }}" width="{{ img.width }}" height="{{ img.height }}" alt="{{ img.alt | escape }}" loading="lazy">
 </picture>
