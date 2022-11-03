@@ -1,6 +1,7 @@
 {%- liquid
   assign p = product_item
   assign media = p.featured_media 
+  assign media_width = 300
 -%}
 <article class="product">
   <div class="content">
@@ -12,9 +13,9 @@
   {%- if media -%}
     <div class="media">
       {%- if media.media_type == 'image' -%}
-        {%- render 'image', img: media, width: 300 -%}
+        {%- render 'image', img: media, width: media_width -%}
       {%- elsif media.media_type == 'video' -%}
-        {%- render 'video', video: media, width: 300 -%}
+        {%- render 'video', video: media, width: media_width -%}
       {%- endif -%}
     </div>
   {%- endif -%}
