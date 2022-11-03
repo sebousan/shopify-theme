@@ -7,6 +7,17 @@
         "text": "<p>Lorem ipsum<\/p>"
       }
     },
+    "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac": {
+      "type": "block-featured-products",
+      "settings": {
+        "title": "Featured products",
+        "text": "<p>Lorem ipsum<\/p>",
+        "product_list": [
+          "casque-audio",
+          "montre-connectee"
+        ]
+      }
+    },
     "bbc10211-779f-471f-84e3-0e3044629e25": {
       "type": "block-title",
       "settings": {
@@ -16,6 +27,7 @@
   },
   "order": [
     "d8c52d8e-0f18-4282-a408-f477cd9bef8a",
+    "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac",
     "bbc10211-779f-471f-84e3-0e3044629e25"
   ]
 }
