@@ -11,7 +11,9 @@
   </div>
   {%- if media -%}
     <div class="media">
-      {%- render 'image' with media as img -%}
+      {%- if media.media_type == 'image' -%}
+        {%- render 'image' with media as img -%}
+      {%- endif -%}
     </div>
   {%- endif -%}
 </article>
