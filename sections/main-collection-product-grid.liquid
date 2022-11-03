@@ -1,22 +1,14 @@
+{%- assign products_per_page = 12 -%}
 <div class="container">
-
-  {%- paginate collection.products by section.settings.products_per_page -%}
+  {%- paginate collection.products by products_per_page -%}
 
     {%- if collection.products.size == 0 -%}
-      EMPTY
+      <p>EMPTY</p>
     {%- else -%}
 
       <div class="products">
         {%- for product in collection.products -%}
-          {% render 'product-item'
-           , product_item: product
-           , media_aspect_ratio: section.settings.image_ratio
-           , show_secondary_image: section.settings.show_secondary_image
-           , show_vendor: section.settings.show_vendor
-           , show_rating: section.settings.show_rating
-           , show_quick_add: section.settings.enable_quick_add
-           , section_id: section.id
-           %}
+          {% render 'product-item' with product as product_item %}
         {%- endfor -%}
       </div>
 
@@ -27,7 +19,6 @@
     {%- endif -%}
 
   {%- endpaginate -%}
-
 </div>
 
 {% schema %}

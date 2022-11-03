@@ -1,7 +1,14 @@
+{%- assign p = product_item -%}
 <article class="product">
   <div class="content">
-    <p class="title"></p>
-    <p class="description"></p>
+    <p class="title">
+      <a href="{{ p.url }}">{{ p.title | escape }}</a>
+    </p>
+    <p class="description">{{ p.description }}</p>
   </div>
-  <div class="media"></div>
+  {%- if p.featured_media -%}
+    <div class="media">
+      {{ p.featured_media | image_url }}
+    </div>
+  {%- endif -%}
 </article>
