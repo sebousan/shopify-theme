@@ -24,6 +24,8 @@
       {%- for media in p.media -%}
         {% if media.media_type == 'image' %}
           {% render 'image', img: media %}
+        {% elsif media.media_type == 'video' %}
+          {% render 'vide', video: media %}
         {% endif %}
       {%- endfor -%}
     </div>
