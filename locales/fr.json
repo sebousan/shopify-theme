@@ -305,13 +305,13 @@
     },
     "headings": {
       "title": "Titre du bloc",
-      "text": "Texte sous le titre"
+      "subtitle": "Sous-titre du bloc"
     },
     "newsletter": {
       "name": "Newsletter",
       "background": "Couleur d’arrière plan",
       "title_default": "S’inscrire à la newsletter",
-      "text_default": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.<\/p>"
+      "subtitle_default": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.<\/p>"
     }
   },
   "localization": {
