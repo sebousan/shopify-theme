@@ -1,3 +1,13 @@
+{% comment %}
+  Renders menu navigation
+
+  Accepts:
+  - menu: {Object} Menu object
+
+  Usage:
+  {% render 'nav', menu: section.settings.menu  %}
+{% endcomment %}
+
 <nav role="navigation" aria-label="{{ menu.title }}">
   <ul>
     {%- for link in menu.links -%}
