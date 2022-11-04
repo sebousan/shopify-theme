@@ -25,7 +25,8 @@
       "name": "Vidéo intégrée (embed)"
     },
     "featured-articles": {
-      "name": "Articles sélectionnées"
+      "name": "Articles sélectionnées",
+      "article": "Article"
     },
     "featured-collections": {
       "name": "Collections sélectionnées",
