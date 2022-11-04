@@ -18,6 +18,9 @@
     "alert": {
       "name": "Alerte"
     },
+    "cards": {
+      "name": "Cards"
+    },
     "editorial": {
       "name": "Editorial"
     },
