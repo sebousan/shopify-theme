@@ -47,6 +47,7 @@
       "title": "Block title",
       "type": "Type",
       "url": "URL",
+      "video": "Video",
       "warning": "Warning"
     },
     "alert": {

@@ -1,0 +1,38 @@
+{% liquid 
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign video = section.settings.video
+%}
+
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+  {{ video | video_tag }}
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.video.name",
+    "tag": "section",
+    "class": "block-video",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "label": "t:sections.global.text"
+      }, {
+        "type": "video",
+        "id": "video",
+        "label": "t:sections.global.video"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.video.name"
+      }
+    ]
+  }
+{% endschema %}
