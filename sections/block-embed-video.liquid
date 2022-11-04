@@ -1,12 +1,12 @@
 {% liquid 
   assign title = section.settings.title
   assign subtitle = section.settings.subtitle
-  assign url = section.settings.url
+  assign video = section.settings.video
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
-
+  {{ video }}
 </div>
 
 {% schema %}
