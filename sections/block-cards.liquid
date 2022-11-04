@@ -13,17 +13,17 @@
       {%- for block in blocks -%}
         {% liquid 
           assign card_title = block.settings.title
-          assign card_subtitle = block.settings.subtitle
+          assign card_text = block.settings.text
           assign card_image = block.settings.image
         %}
         <div class="col">
           <div class="card">
             <div>
-              {% if card_title %}
+              {% if card_title != blank %}
                 <p class="title">{{ card_title }}</p>
               {% endif %}
-              {% if card_subtitle %}
-                <p class="text">{{ card_subtitle }}</p>
+              {% if card_text != blank %}
+                <p class="text">{{ card_text }}</p>
               {% endif %}
             </div>
             {%- if card_image -%}
