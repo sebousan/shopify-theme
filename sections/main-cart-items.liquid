@@ -1,5 +1,8 @@
 
 <div class="container">
+
+  {%- render 'heading', title: 'sections.cart.title' | t -%}
+
   <div class="title-wrapper-with-link">
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
