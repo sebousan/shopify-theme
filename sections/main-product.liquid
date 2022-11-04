@@ -21,16 +21,16 @@
 
         {%- unless product.has_only_default_variant -%}
           {%- for option in product.options_with_values -%}
-            <fieldset class="js product-form__input">
-              <legend class="form__label">{{ option.name }}</legend>
+            <fieldset>
+              <legend>{{ option.name }}</legend>
               {%- for value in option.values -%}
+                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                  {{- value -}}
+                </label>
                 <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}"
                   {% if option.selected_value == value %}
                   checked
                   {% endif %}>
-                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                  {{- value -}}
-                </label>
               {%- endfor -%}
             </fieldset>
           {%- endfor -%}
