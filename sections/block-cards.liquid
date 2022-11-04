@@ -9,7 +9,24 @@
   {%- if blocks.size > 0 -%}
     <div class="row">
       {%- for block in blocks -%}
-        <div class="col"></div>
+        {% liquid 
+          assign title = block.settings.title
+          assign subtitle = block.settings.subtitle
+          assign image = block.settings.image
+        %}
+        <div class="col">
+          <div class="card">
+            <div>
+              {% if title %}
+                <p class="title">{{ title }}</p>
+              {% endif %}
+              {% if text %}
+                <p class="text">{{ text }}</p>
+              {% endif %}
+            </div>
+            <div></div>
+          </div>
+        </div>
       {%- endfor -%}
     </div>
   {%- endif -%}
@@ -43,8 +60,12 @@
             "label": "t:sections.global.title"
           }, {
             "type": "richtext",
-            "id": "subtite",
-            "label": "t:sections.global.subtitle"
+            "id": "text",
+            "label": "t:sections.global.text"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.global.image"
           }
         ]
       }
