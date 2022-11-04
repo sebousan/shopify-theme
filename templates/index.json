@@ -10,7 +10,7 @@
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac": {
       "type": "block-featured-products",
       "settings": {
-        "title": "Featured products",
+        "title": "Bloc featured products",
         "subtite": "<p>Sous titre du bloc<\/p>",
         "product_list": [
           "casque-audio",
@@ -27,7 +27,7 @@
     "e9faa973-6388-4cc2-ab63-b7271c9131a1": {
       "type": "block-newsletter",
       "settings": {
-        "title": "title newsletter",
+        "title": "Bloc newsletter",
         "subtitle": "<p>sous titre newsletter<\/p>",
         "background": false
       }
