@@ -1,0 +1,35 @@
+{
+  "settings_schema": {
+  },
+  "sections": {
+    "global": {
+      "background": "Background color",
+      "danger": "Danger",
+      "image": "Image",
+      "primary": "Primary",
+      "subtitle": "Block subtitle",
+      "success": "Succes",
+      "text": "Texte",
+      "title": "Block title",
+      "type": "Type",
+      "warning": "Warning"
+    },
+    "editorial": {
+      "name": "Editorial"
+    },
+    "featured-collections": {
+      "name": "Featured collections",
+      "collection_list": "Collections"
+    },
+    "featured-products": {
+      "name": "Featured products",
+      "product_list": "Products"
+    },
+    "newsletter": {
+      "name": "Newsletter"
+    },
+    "quote": {
+      "name": "Quote"
+    }
+  }
+}

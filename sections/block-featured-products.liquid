@@ -1,21 +1,12 @@
 {% liquid 
   assign title = section.settings.title
-  assign text = section.settings.text
+  assign subtitle = section.settings.subtitle
   assign products = section.settings.product_list
 %}
 
 <div class="container">
 
-  {%- if title != blank or text != blank -%}
-    <header class="heading">
-      {%- if title != blank -%}
-        <h2>{{ title }}</h2>
-      {%- endif -%}
-      {%- if text != blank -%}
-        <p>{{ text }}</p>
-      {%- endif -%}
-    </header>
-  {%- endif -%}
+  {% render 'block-heading', title: title, subtitle: subtitle %}
 
   {%- if products != blank -%}
     <div class="products">
@@ -29,28 +20,28 @@
 
 {% schema %}
   {
-    "name": "Produits sélectionnés",
+    "name": "t:sections.featured-products.name",
     "tag": "section",
     "class": "block-products",
     "settings": [
       {
         "type": "text",
         "id": "title",
-        "label": "Titre"
+        "label": "t:sections.global.title"
       }, {
         "type": "richtext",
-        "id": "text",
-        "label": "Texte"
+        "id": "subtite",
+        "label": "t:sections.global.subtitle"
       }, {
         "type": "product_list",
         "id": "product_list",
-        "label": "Produits",
+        "label": "t:sections.featured-products.product_list",
         "limit": 4
       }
     ],
     "presets": [
       {
-        "name": "Produits sélectionnés"
+        "name": "t:sections.featured-products.name"
       }
     ]
   }

@@ -22,27 +22,27 @@
 
 {% schema %}
   {
-    "name": "Editorial",
+    "name": "t:sections.editorial.name",
     "tag": "section",
     "class": "block-editorial",
     "settings": [
       {
         "type": "text",
         "id": "title",
-        "label": "Titre"
+        "label": "t:sections.global.title"
       }, {
         "type": "richtext",
-        "id": "text",
-        "label": "Texte"
+        "id": "subtitle",
+        "label": "t:sections.global.subtitle"
       }, {
         "type": "image_picker",
         "id": "image",
-        "label": "Image"
+        "label": "t:sections.global.image"
       }
     ],
     "presets": [
       {
-        "name": "Editorial"
+        "name": "t:sections.editorial.name"
       }
     ]
   }

@@ -55,11 +55,17 @@
       "name": "Slider"
     }
   },
-  "newsletter": {
-    "label": "Email",
-    "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+  "form": {
+    "email": "Email",
+    "subscribe": "Subscribe",
+    "placeholder": {
+      "email": "name@email.com"
+    }
   },
+  "newsletter": {
+    "success": "Thanks for subscribing"
+  },
+
   "accessibility": {
     "skip_to_footer": "Skip to footer",
     "skip_to_navigation": "Skip to navigation",

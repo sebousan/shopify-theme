@@ -1,0 +1,35 @@
+{
+  "settings_schema": {
+  },
+  "sections": {
+    "global": {
+      "background": "Couleur d’arrière plan",
+      "danger": "Danger",
+      "image": "Image",
+      "primary": "Primary",
+      "subtitle": "Sous-titre du bloc",
+      "success": "Success",
+      "text": "Texte",
+      "title": "Titre du bloc",
+      "type": "Type",
+      "warning": "Warning"
+    },
+    "editorial": {
+      "name": "Editorial"
+    },
+    "featured-collections": {
+      "name": "Collections sélectionnées",
+      "collection_list": "Collections"
+    },
+    "featured-products": {
+      "name": "Produits sélectionnées",
+      "product_list": "Produits"
+    },
+    "newsletter": {
+      "name": "Newsletter"
+    },
+    "quote": {
+      "name": "Citation"
+    }
+  }
+}

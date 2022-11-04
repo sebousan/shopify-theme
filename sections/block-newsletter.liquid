@@ -1,0 +1,77 @@
+{% liquid
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign background = section.settings.background
+%}
+
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+
+  {%- assign formId = 'contact-' | append: section.id -%}
+  {% form 'customer', id: formId %}
+
+    {%- if form.posted_successfully? -%}
+      <p class="alert alert-succes" tabindex="-1" data-form-status>
+        {{ 'newsletter.success' | t }}
+      </p>
+    {%- endif -%}
+
+    <input type="hidden" name="contact[tags]" value="newsletter">
+
+    <div class="field">
+      <label for="{{ formId }}-email">{{ 'form.email' | t }}</label>
+      <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="contact[email]" id="{{ formId }}-email" value="{{ form.email }}" placeholder="{{ 'form.placeholder.email' | t }}" autocapitalize="off"
+        {% if form.errors %}
+        class="is-invalid"
+        aria-invalid="true"
+        aria-describedby="{{ formId }}-email-error"
+        data-form-status
+        {% endif %}
+        required>
+    </div>
+    <button type="submit" class="btn">{{ 'form.subscribe' | t }}</button>
+
+    {%- if form.errors contains 'email' -%}
+      <span id="{{ formId }}-email-error" class="alert alert-danger">
+        <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+        <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+      </span>
+    {%- endif -%}
+  {% endform %}
+
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.newsletter.name",
+    "class": "block-newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "t:sections.global.subtitle"
+      }, {
+        "type": "checkbox",
+        "id": "background",
+        "default": false,
+        "label": "t:sections.global.background"
+      }
+    ],
+    "presets": [
+      {
+        "name": {
+          "en": "Newsletter",
+          "fr": "Newsletter"
+        },
+        "category": {
+          "en": "Promotional",
+          "fr": "Promotionnel"
+        }
+      }
+    ]
+  }
+{% endschema %}

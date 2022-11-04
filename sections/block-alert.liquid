@@ -1,0 +1,52 @@
+{% liquid 
+  assign text = section.settings.text
+  assign type = section.settings.type
+%}
+
+{%- if text != blank -%}
+  <div class="container">
+    <div class="alert alert-{{ type }}" role="alert">
+      <p>{{ text }}</p>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "t:sections.alert.name",
+    "tag": "section",
+    "class": "block-alert",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "t:sections.global.text"
+      }, {
+        "type": "select",
+        "id": "type",
+        "label": "t:sections.global.type",
+        "options": [
+          {
+            "value": "danger",
+            "label": "t:sections.global.danger"
+          }, {
+            "value": "warning",
+            "label": "t:sections.global.warning"
+          }, {
+            "value": "success",
+            "label": "t:sections.global.success"
+          }, {
+            "value": "primary",
+            "label": "t:sections.global.primary"
+          }
+        ],
+        "default": "danger"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.alert.name"
+      }
+    ]
+  }
+{% endschema %}

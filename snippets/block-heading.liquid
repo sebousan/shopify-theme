@@ -1,0 +1,10 @@
+{%- if title != blank or subtitle != blank -%}
+  <header class="heading">
+    {%- if title != blank -%}
+      <h2>{{ title }}</h2>
+    {%- endif -%}
+    {%- if subtitle != blank -%}
+      <p>{{ subtitle }}</p>
+    {%- endif -%}
+  </header>
+{%- endif -%}
