@@ -1,3 +1,19 @@
+{%- liquid
+  assign p = product.selected_or_first_available_variant
+  assign media = p.featured_media
+
+-%}
+
+<div class="container">
+  <div class="row">
+    <div class="content">
+      <h1>{{ product.title | escape }}</h1>
+      {%- render 'price', product: product, use_variant: true, show_badges: true -%}
+    </div>
+    <div class="media"></div>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "t:main.product.name",
