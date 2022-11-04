@@ -1,7 +1,5 @@
 {%- liquid
   assign p = product.selected_or_first_available_variant
-  assign featured_media = p.featured_media
-
 -%}
 
 <div class="container">
@@ -27,10 +25,7 @@
                 <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                   {{- value -}}
                 </label>
-                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}"
-                  {% if option.selected_value == value %}
-                  checked
-                  {% endif %}>
+                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %}checked{% endif %}>
               {%- endfor -%}
             </fieldset>
           {%- endfor -%}
