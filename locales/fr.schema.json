@@ -2,7 +2,9 @@
   "settings_schema": {
   },
   "main": {
-    "product": "Fiche produit"
+    "product": {
+      "name": "Fiche produit"
+    }
   },
   "sections": {
     "global": {
