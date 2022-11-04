@@ -20,7 +20,7 @@
 
     <div class="field">
       <label for="{{ formId }}-email">{{ 'form.email' | t }}</label>
-      <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="contact[email]" id="{{ formId }}-email" value="{{ form.email }}" placeholder="{{ 'form.placeholder.email' | t }}" aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}" aria-required="true" autocapitalize="off"
+      <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="contact[email]" id="{{ formId }}-email" value="{{ form.email }}" placeholder="{{ 'form.placeholder.email' | t }}" required="true" autocapitalize="off"
         {% if form.errors %}
         class="is-invalid"
         aria-invalid="true"
