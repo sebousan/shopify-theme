@@ -57,15 +57,13 @@
   },
   "form": {
     "email": "E-mail",
-    "subscribe": "Subscribe",
+    "subscribe": "S’enregister",
     "placeholder": {
       "email": "name@email.com"
     }
   },
   "newsletter": {
-    "label": "E-mail",
-    "success": "Merci de votre inscription",
-    "button_label": "S'inscrire"
+    "success": "Merci de votre inscription"
   },
   "accessibility": {
     "skip_to_footer": "Passer en pied de page",

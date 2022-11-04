@@ -57,7 +57,10 @@
   },
   "form": {
     "email": "Email",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "placeholder": {
+      "email": "name@email.com"
+    }
   },
   "newsletter": {
     "success": "Thanks for subscribing"
