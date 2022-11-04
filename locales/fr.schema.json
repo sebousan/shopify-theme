@@ -12,6 +12,7 @@
       "text": "Texte",
       "title": "Titre du bloc",
       "type": "Type",
+      "url": "URL",
       "warning": "Warning"
     },
     "alert": {
