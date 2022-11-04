@@ -77,6 +77,9 @@
       "name": "Produits sélectionnées",
       "product_list": "Produits"
     },
+    "image": {
+      "name": "Image"
+    },
     "newsletter": {
       "name": "Newsletter"
     },
