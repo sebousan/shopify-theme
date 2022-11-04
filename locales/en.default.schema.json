@@ -5,6 +5,7 @@
     "global": {
       "background": "Background color",
       "danger": "Danger",
+      "nb_column": "Number of column",
       "image": "Image",
       "primary": "Primary",
       "subtitle": "Block subtitle",
