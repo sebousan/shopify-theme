@@ -1,53 +1,30 @@
-{%- assign id = section.id -%}
-{%- assign title = section.settings.title -%}
-{%- assign subtitle = section.settings.subtitle -%}
-{%- assign background = section.settings.background -%}
-{% include 'component-newsletter' %}
+{% liquid
+  assign id = section.id
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign background = section.settings.background
+%}
 
 {% schema %}
   {
-    "name": {
-      "en": "Newsletter",
-      "fr": "Newsletter"
-    },
-    "class": "section--newsletter",
+    "name": "t:sections.newsletter.name",
+    "class": "block-newsletter",
     "settings": [
       {
         "type": "text",
         "id": "title",
-        "label": {
-          "en": "Heading",
-          "fr": "En-tête"
-        },
-        "default": {
-          "en": "Subscribe to our newsletter",
-          "fr": "S'inscrire à la newsletter"
-        }
+        "label": "t:sections.headings.title",
+        "default": "t:sections.newsletter.title_default"
       }, {
         "type": "richtext",
         "id": "subtitle",
-        "label": {
-          "en": "Subtitle",
-          "fr": "Sous-titre"
-        },
-        "default": {
-          "en": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
-          "fr": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.</p>"
-        }
+        "label": "t:sections.headings.subtitle",
+        "default": "t:sections.newsletter.subtitle_default"
       }, {
         "type": "checkbox",
         "id": "background",
         "default": false,
-        "label": {
-          "en": "Grey background?",
-          "fr": "Arrière plan gris ?"
-        }
-      }, {
-        "type": "paragraph",
-        "content": {
-          "en": "Any customers who sign up will have an account created for them in Shopify. [View customers](/admin/customers?query=&accepts_marketing=1)",
-          "fr": "Un compte sera créé dans Shopify pour les clients qui s'inscrivent. [Afficher les clients](/admin/customers?query=&accepts_marketing=1)"
-        }
+        "label": "t:sections.newsletter.background"
       }
     ],
     "presets": [
