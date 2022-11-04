@@ -5,7 +5,9 @@
   assign background = section.settings.background
 %}
 
-{% render 'block-heading', title: title %}
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+</div>
 
 {% schema %}
   {
