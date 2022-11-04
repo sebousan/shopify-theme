@@ -21,6 +21,9 @@
     "editorial": {
       "name": "Editorial"
     },
+    "embed-video": {
+      "name": "Vidéo intégrée (embed)"
+    },
     "featured-articles": {
       "name": "Articles sélectionnées"
     },
