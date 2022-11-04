@@ -16,23 +16,23 @@
 
 {% schema %}
   {
-    "name": "t:sections.quote.name",
+    "name": "t:sections.video.name",
     "tag": "section",
-    "class": "block-quote",
+    "class": "block-video",
     "settings": [
       {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
         "type": "richtext",
         "id": "text",
         "label": "t:sections.global.text"
-      }, {
-        "type": "text",
-        "id": "author",
-        "label": "t:sections.quote.author"
       }
     ],
     "presets": [
       {
-        "name": "t:sections.quote.name"
+        "name": "t:sections.video.name"
       }
     ]
   }
