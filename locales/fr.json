@@ -302,6 +302,14 @@
     },
     "page": {
       "title": "Titre de la page"
+    },
+    "headings": {
+      "title": "Newsletter",
+      "text": "Newsletter"
+    },
+    "newsletter": {
+      "name": "Newsletter",
+      "background": "Arrière plan"
     }
   },
   "localization": {
