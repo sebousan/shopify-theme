@@ -17,7 +17,8 @@
       "settings": {
         "title": "video",
         "subtitle": "<p>sub<\/p>",
-        "video": ""
+        "video": "https:\/\/www.youtube.com\/watch?v=HLuruFNhYyw",
+        "video_title": ""
       }
     }
   },
