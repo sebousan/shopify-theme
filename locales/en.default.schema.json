@@ -1,6 +1,9 @@
 {
   "settings_schema": {
   },
+  "main": {
+    "product": "Product"
+  },
   "sections": {
     "global": {
       "background": "Background color",
