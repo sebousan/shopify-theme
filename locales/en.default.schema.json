@@ -21,6 +21,9 @@
     "editorial": {
       "name": "Editorial"
     },
+    "featured-articles": {
+      "name": "Featured articles"
+    },
     "featured-collections": {
       "name": "Featured collections",
       "collection_list": "Collections"
