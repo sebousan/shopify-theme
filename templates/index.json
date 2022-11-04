@@ -3,13 +3,15 @@
     "d8c52d8e-0f18-4282-a408-f477cd9bef8a": {
       "type": "block-editorial",
       "settings": {
-        "title": "Bloc editorial"
+        "title": "Bloc editorial",
+        "text": "<p>texte du bloc editorial<\/p>"
       }
     },
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac": {
       "type": "block-featured-products",
       "settings": {
         "title": "Featured products",
+        "subtite": "",
         "product_list": [
           "casque-audio",
           "montre-connectee"
