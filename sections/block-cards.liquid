@@ -9,7 +9,7 @@
   {% render 'block-heading', title: title, subtitle: subtitle %}
 
   {%- if blocks.size > 0 -%}
-    <div class="row row-cols-1 row-cols-md-">
+    <div class="row row-cols-1 row-cols-md-{{ column }}">
       {%- for block in blocks -%}
         {% liquid 
           assign title = block.settings.title
