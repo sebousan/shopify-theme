@@ -1,0 +1,46 @@
+{% liquid 
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign products = section.settings.product_list
+%}
+
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+
+  {%- if products != blank -%}
+    <div class="products">
+      {%- for product in products -%}
+        {% render 'product-item' with product as product_item %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.featured-products.name",
+    "tag": "section",
+    "class": "block-products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
+        "type": "richtext",
+        "id": "subtite",
+        "label": "t:sections.global.subtitle"
+      }, {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "t:sections.featured-products.product_list",
+        "limit": 4
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.featured-products.name"
+      }
+    ]
+  }
+{% endschema %}
