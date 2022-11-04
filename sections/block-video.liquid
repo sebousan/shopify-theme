@@ -9,7 +9,7 @@
   {% render 'block-heading', title: title, subtitle: subtitle %}
   <div class="row">
     <div class="{{ size }}">
-      {{ video | video_tag }}
+      {%- render 'video', video: video -%}
     </div>
   </div>
 </div>
