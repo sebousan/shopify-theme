@@ -1,0 +1,31 @@
+{% if recommendations.performed and recommendations.products_count > 0 %}
+  {% liquid 
+    assign title = section.settings.title
+    assign subtitle = section.settings.subtitle
+  %}
+  <div class="container">
+    {% render 'block-heading', title: title, subtitle: subtitle %}
+    {% for recommendation in recommendations.products %}
+      {%- render 'product-item' with recommendation as product_item -%}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "t:sections.product-recommendations.name",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
+        "type": "text",
+        "id": "subtitle",
+        "label": "t:sections.global.subtitle"
+      }
+    ]
+  }
+{% endschema %}
