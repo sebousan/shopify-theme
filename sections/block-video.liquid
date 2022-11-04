@@ -7,11 +7,13 @@
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
-  <div class="row">
-    <div class="{{ size }}">
-      {%- render 'video', video: video -%}
+  {%- if video != blank -%}
+    <div class="row">
+      <div class="{{ size }}">
+        {%- render 'video', video: video -%}
+      </div>
     </div>
-  </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
