@@ -6,13 +6,20 @@
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
 
+  {%- if blocks.size > 0 -%}
+    <div class="row">
+      {%- for block in blocks -%}
+        <div class="col"></div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
   {
-    "name": "t:sections.editorial-column.name",
+    "name": "t:sections.cards.name",
     "tag": "section",
-    "class": "block-editorial-column",
+    "class": "block-cards",
     "settings": [
       {
         "type": "text",
@@ -44,7 +51,7 @@
     ],
     "presets": [
       {
-        "name": "t:sections.editorial-column.name"
+        "name": "t:sections.cards.name"
       }
     ]
   }
