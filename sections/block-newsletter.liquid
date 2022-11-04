@@ -5,12 +5,7 @@
   assign background = section.settings.background
 %}
 
-{% if title != blank or subtitle != blank %}
-  <header class="heading">
-    <h2>{{ title }}</h2>
-    <p>{{ subtitle }}</p>
-  </header>
-{% endif %}
+{% render 'block-heading' %}
 
 {% schema %}
   {
