@@ -3,13 +3,21 @@
   assign subtitle = section.settings.subtitle
   assign image = section.settings.image
   assign size = section.settings.size
+  case size
+    when "medium"
+      assign img_width = 900
+    when "small"
+      assign img_width = 600
+    else
+      assign img_width = 1200
+  endcase
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
   <div class="row">
     <div class="{{ size }}">
-      {% render 'image', img: image %}
+      {% render 'image', img: image, width: img_width %}
     </div>
   </div>
 </div>
