@@ -32,7 +32,8 @@
       ],
       "settings": {
         "title": "Bloc cards",
-        "subtite": "<p>subtitle<\/p>"
+        "subtitle": "<p>Lorem ipsum<\/p>",
+        "column": 4
       }
     },
     "2f789882-795c-4795-b7bf-17444803da34": {
@@ -56,7 +57,7 @@
       "type": "block-featured-products",
       "settings": {
         "title": "Bloc featured products",
-        "subtite": "<p>Sous titre du bloc<\/p>",
+        "subtitle": "",
         "product_list": [
           "casque-audio",
           "montre-connectee"
@@ -92,7 +93,7 @@
       ],
       "settings": {
         "title": "Bloc featured articles",
-        "subtite": "<p>sub title articles<\/p>"
+        "subtitle": ""
       }
     }
   },
