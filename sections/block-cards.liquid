@@ -25,7 +25,9 @@
                 <p class="text">{{ text }}</p>
               {% endif %}
             </div>
-            <div></div>
+            {%- if image -%}
+              <div></div>
+            {%- endif -%}
           </div>
         </div>
       {%- endfor -%}
