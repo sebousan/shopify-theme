@@ -83,6 +83,9 @@
     "quote": {
       "name": "Citation",
       "author": "Auteur"
+    },
+    "video": {
+      "name": "Video"
     }
   }
 }
