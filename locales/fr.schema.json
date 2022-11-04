@@ -5,6 +5,9 @@
     "account": {
       "name": "Account"
     },
+    "activate-account": {
+      "name": "Activate account"
+    },
     "address": {
       "name": "Address"
     },
