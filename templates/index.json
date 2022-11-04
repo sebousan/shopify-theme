@@ -57,7 +57,7 @@
       "type": "block-featured-products",
       "settings": {
         "title": "Bloc featured products",
-        "subtitle": "",
+        "subtitle": "<p>sous-titre<\/p>",
         "product_list": [
           "casque-audio",
           "montre-connectee"
@@ -93,7 +93,7 @@
       ],
       "settings": {
         "title": "Bloc featured articles",
-        "subtitle": ""
+        "subtitle": "<p>sous-titre<\/p>"
       }
     }
   },
