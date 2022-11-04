@@ -12,19 +12,20 @@
         "subtitle": "lorem ipsum"
       }
     },
-    "c7eab241-9ba2-41bc-ae52-19ade89e10bf": {
-      "type": "block-embed-video",
+    "2fe4607b-358b-4e7a-9021-834ccfb74434": {
+      "type": "block-external-video",
       "settings": {
-        "title": "video",
-        "subtitle": "<p>sub<\/p>",
-        "video": "https:\/\/www.youtube.com\/watch?v=HLuruFNhYyw",
-        "video_title": ""
+        "title": "Bloc video external",
+        "subtitle": "",
+        "video": "https:\/\/www.youtube.com\/watch?v=EGgflfoYG4g",
+        "video_title": "",
+        "size": "large"
       }
     }
   },
   "order": [
     "main",
     "product-recommendations",
-    "c7eab241-9ba2-41bc-ae52-19ade89e10bf"
+    "2fe4607b-358b-4e7a-9021-834ccfb74434"
   ]
 }
