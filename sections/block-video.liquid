@@ -1,0 +1,39 @@
+{% liquid 
+  assign text = section.settings.text
+  assign author = section.settings.author
+%}
+
+<div class="container">
+  <figure>
+    <blockquote>
+      <p>{{ text }}</p>
+    </blockquote>
+    <figcaption>
+      <p>{{ author }}</p>
+    </figcaption>
+  </figure>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.quote.name",
+    "tag": "section",
+    "class": "block-quote",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "t:sections.global.text"
+      }, {
+        "type": "text",
+        "id": "author",
+        "label": "t:sections.quote.author"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.quote.name"
+      }
+    ]
+  }
+{% endschema %}
