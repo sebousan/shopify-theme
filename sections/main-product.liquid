@@ -16,21 +16,6 @@
       {%- form 'product', product, id: product_form_installment_id -%}
         <input type="hidden" name="id" value="{{ p.id }}">
         {{ form | payment_terms }}
-
-        {%- unless product.has_only_default_variant -%}
-          {%- for option in product.options_with_values -%}
-            <fieldset>
-              <legend>{{ option.name }}</legend>
-              {%- for value in option.values -%}
-                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                  {{- value -}}
-                </label>
-                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %}>
-              {%- endfor -%}
-            </fieldset>
-          {%- endfor -%}
-        {%- endunless -%}
-
       {%- endform -%}
     </div>
     <div class="media">
