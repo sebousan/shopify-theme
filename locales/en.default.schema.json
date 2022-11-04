@@ -11,6 +11,9 @@
     "address": {
       "name": "Address"
     },
+    "cart": {
+      "name": "Cart"
+    },
     "collection": {
       "product-grid": "Products grid"
     },
