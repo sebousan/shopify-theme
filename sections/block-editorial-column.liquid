@@ -11,9 +11,9 @@
 
 {% schema %}
   {
-    "name": "t:sections.featured-articles.name",
+    "name": "t:sections.editorial-column.name",
     "tag": "section",
-    "class": "block-articles",
+    "class": "block-editorial-column",
     "settings": [
       {
         "type": "text",
@@ -29,12 +29,16 @@
     "blocks": [
       {
         "name": "Item",
-        "type": "item",
+        "type": "t:sections.global.item",
         "settings": [
           {
-            "type": "article",
-            "id": "article",
-            "label": "t:sections.featured-articles.article"
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.global.title"
+          }, {
+            "type": "richtext",
+            "id": "subtite",
+            "label": "t:sections.global.subtitle"
           }
         ]
       }
