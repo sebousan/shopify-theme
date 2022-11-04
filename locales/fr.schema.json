@@ -2,12 +2,27 @@
   "settings_schema": {
   },
   "main": {
+    "account": {
+      "name": "Account"
+    },
+    "address": {
+      "name": "Address"
+    },
     "collection": {
       "product-grid": "Grille produits"
     },
+    "login": {
+      "name": "Login"
+    },
     "name": "Contenu principal",
+    "order": {
+      "name": "Order"
+    },
     "product": {
       "name": "Fiche produit"
+    },
+    "register": {
+      "name": "Register"
     }
   },
   "sections": {
