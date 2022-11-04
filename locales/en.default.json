@@ -295,16 +295,6 @@
     },
     "page": {
       "title": "Page title"
-    },
-    "headings": {
-      "title": "Block title",
-      "subtitle": "Block subtitle"
-    },
-    "newsletter": {
-      "name": "Newsletter",
-      "background": "Background color",
-      "title_default": "Subscribe to our newsletter",
-      "subtitle_default": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
     }
   },
   "localization": {
