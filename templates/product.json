@@ -11,10 +11,21 @@
         "title": "Recommandations",
         "subtitle": "lorem ipsum"
       }
+    },
+    "2fe4607b-358b-4e7a-9021-834ccfb74434": {
+      "type": "block-external-video",
+      "settings": {
+        "title": "Bloc video external",
+        "subtitle": "",
+        "video": "https:\/\/www.youtube.com\/watch?v=EGgflfoYG4g",
+        "video_title": "title",
+        "size": "large"
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "2fe4607b-358b-4e7a-9021-834ccfb74434"
   ]
 }
