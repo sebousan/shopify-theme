@@ -48,6 +48,24 @@
         "subtitle": "<p>sous titre newsletter<\/p>",
         "background": false
       }
+    },
+    "ba91bb78-28cf-4bc7-bafa-a54c6ca3084b": {
+      "type": "block-featured-articles",
+      "blocks": {
+        "92be640e-5a65-4ca2-9a1c-b727ff654e68": {
+          "type": "item",
+          "settings": {
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "92be640e-5a65-4ca2-9a1c-b727ff654e68"
+      ],
+      "settings": {
+        "title": "Bloc featured articles",
+        "subtite": "<p>sub title articles<\/p>"
+      }
     }
   },
   "order": [
@@ -56,6 +74,7 @@
     "89128528-1c57-4a89-85d0-ceca399ecc19",
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac",
     "bbc10211-779f-471f-84e3-0e3044629e25",
-    "e9faa973-6388-4cc2-ab63-b7271c9131a1"
+    "e9faa973-6388-4cc2-ab63-b7271c9131a1",
+    "ba91bb78-28cf-4bc7-bafa-a54c6ca3084b"
   ]
 }
