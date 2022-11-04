@@ -12,8 +12,8 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "menu": "",
-          "menu_legal": "",
+          "menu": "main-menu",
+          "menu_legal": "footer",
           "menu_social": ""
         }
       }
