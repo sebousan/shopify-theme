@@ -25,7 +25,7 @@
                 <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                   {{- value -}}
                 </label>
-                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %}checked{% endif %}>
+                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %}>
               {%- endfor -%}
             </fieldset>
           {%- endfor -%}
