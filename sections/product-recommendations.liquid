@@ -1,7 +1,9 @@
-<h2>Reco</h2>
-{% for recommendation in recommendations.products %}
-  {%- render 'product-item' with recommendation as product_item -%}
-{% endfor %}
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+  {% for recommendation in recommendations.products %}
+    {%- render 'product-item' with recommendation as product_item -%}
+  {% endfor %}
+</div>
 
 {% schema %}
   {
