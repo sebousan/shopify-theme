@@ -12,21 +12,21 @@
     <div class="row row-cols-1 row-cols-md-{{ column }}">
       {%- for block in blocks -%}
         {% liquid 
-          assign title = block.settings.title
-          assign subtitle = block.settings.subtitle
-          assign image = block.settings.image
+          assign card_title = block.settings.title
+          assign card_subtitle = block.settings.subtitle
+          assign card_image = block.settings.image
         %}
         <div class="col">
           <div class="card">
             <div>
-              {% if title %}
-                <p class="title">{{ title }}</p>
+              {% if card_title %}
+                <p class="title">{{ card_title }}</p>
               {% endif %}
-              {% if subtitle %}
-                <p class="text">{{ subtitle }}</p>
+              {% if card_subtitle %}
+                <p class="text">{{ card_subtitle }}</p>
               {% endif %}
             </div>
-            {%- if image -%}
+            {%- if card_image -%}
               <div></div>
             {%- endif -%}
           </div>
