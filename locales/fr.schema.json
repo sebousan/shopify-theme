@@ -11,6 +11,12 @@
     "editorial": {
       "name": "Editorial"
     },
+    "featured-collections": {
+      "name": "Collections sélectionnées"
+    },
+    "featured-products": {
+      "name": "Produits sélectionnées"
+    },
     "newsletter": {
       "name": "Newsletter"
     }
