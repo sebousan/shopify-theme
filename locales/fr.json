@@ -309,7 +309,9 @@
     },
     "newsletter": {
       "name": "Newsletter",
-      "background": "Arrière plan"
+      "background": "Arrière plan",
+      "title_default": "S’inscrire à la newsletter",
+      "text_default": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.<\/p>"
     }
   },
   "localization": {
