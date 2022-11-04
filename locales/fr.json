@@ -55,6 +55,13 @@
       "name": "Carrousel"
     }
   },
+  "form": {
+    "email": "E-mail",
+    "subscribe": "Subscribe",
+    "placeholder": {
+      "email": "name@email.com"
+    }
+  },
   "newsletter": {
     "label": "E-mail",
     "success": "Merci de votre inscription",
