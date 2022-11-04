@@ -4,7 +4,6 @@
 %}
 
 <div class="container">
-
   <figure>
     <blockquote>
       <p>{{ text }}</p>
@@ -13,45 +12,27 @@
       <p>{{ author }}</p>
     </figcaption>
   </figure>
-
-  <div class="row">
-    <div class="content">
-      {%- if title != blank -%}
-        <h2>{{ title }}</h2>
-      {%- endif -%}
-      {%- if text != blank -%}
-        <p>{{ text }}</p>
-      {%- endif -%}
-    </div>
-    <div class="media">
-      {{ image }}
-    </div>
-  </div>
 </div>
 
 {% schema %}
   {
-    "name": "t:sections.editorial.name",
+    "name": "t:sections.quote.name",
     "tag": "section",
-    "class": "block-editorial",
+    "class": "block-quote",
     "settings": [
       {
-        "type": "text",
-        "id": "title",
-        "label": "t:sections.global.title"
-      }, {
         "type": "richtext",
         "id": "text",
-        "label": "t:sections.global.subtitle"
+        "label": "t:sections.global.text"
       }, {
-        "type": "image_picker",
-        "id": "image",
-        "label": "t:sections.global.image"
+        "type": "text",
+        "id": "author",
+        "label": "t:sections.quote.author"
       }
     ],
     "presets": [
       {
-        "name": "t:sections.editorial.name"
+        "name": "t:sections.quote.name"
       }
     ]
   }
