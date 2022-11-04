@@ -2,8 +2,33 @@
   "settings_schema": {
   },
   "main": {
+    "account": {
+      "name": "Account"
+    },
+    "activate-account": {
+      "name": "Activate account"
+    },
+    "address": {
+      "name": "Address"
+    },
+    "collection": {
+      "product-grid": "Products grid"
+    },
+    "login": {
+      "name": "Login"
+    },
+    "name": "Main content",
+    "order": {
+      "name": "Order"
+    },
     "product": {
       "name": "Product sheet"
+    },
+    "register": {
+      "name": "Register"
+    },
+    "reset-password": {
+      "name": "Reset password"
     }
   },
   "sections": {
