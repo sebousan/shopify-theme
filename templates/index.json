@@ -7,6 +7,34 @@
         "text": "<p>texte du bloc editorial<\/p>"
       }
     },
+    "2a78cd5e-ff22-488a-a02f-4c4ec824ca51": {
+      "type": "block-cards",
+      "blocks": {
+        "d6b866b4-5782-40c2-8679-77ab510beabd": {
+          "type": "t:sections.global.item",
+          "settings": {
+            "title": "Card 1",
+            "text": "<p>Lorem ipsum<\/p>"
+          }
+        },
+        "8f00568f-8b13-4dc5-aa9d-65cfbccde578": {
+          "type": "t:sections.global.item",
+          "settings": {
+            "title": "Card 2",
+            "text": "<p>{{ shop.brand.short_description }}<\/p>",
+            "image": "shopify:\/\/shop_images\/default-avatar-300x300.png"
+          }
+        }
+      },
+      "block_order": [
+        "d6b866b4-5782-40c2-8679-77ab510beabd",
+        "8f00568f-8b13-4dc5-aa9d-65cfbccde578"
+      ],
+      "settings": {
+        "title": "Bloc cards",
+        "subtite": "<p>subtitle<\/p>"
+      }
+    },
     "2f789882-795c-4795-b7bf-17444803da34": {
       "type": "block-featured-collections",
       "settings": {
@@ -70,6 +98,7 @@
   },
   "order": [
     "d8c52d8e-0f18-4282-a408-f477cd9bef8a",
+    "2a78cd5e-ff22-488a-a02f-4c4ec824ca51",
     "2f789882-795c-4795-b7bf-17444803da34",
     "89128528-1c57-4a89-85d0-ceca399ecc19",
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac",
