@@ -38,14 +38,17 @@
     "global": {
       "background": "Background color",
       "danger": "Danger",
-      "nb_column": "Number of column",
       "image": "Image",
+      "large": "Large",
+      "medium": "Medium",
+      "nb_column": "Number of column",
       "primary": "Primary",
       "subtitle": "Block subtitle",
       "success": "Succes",
       "text": "Texte",
       "title": "Block title",
       "type": "Type",
+      "small": "Small",
       "url": "URL",
       "video": "Video",
       "warning": "Warning"
