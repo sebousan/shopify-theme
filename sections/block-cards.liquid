@@ -27,7 +27,9 @@
               {% endif %}
             </div>
             {%- if card_image -%}
-              <div></div>
+              <div>
+                {%- render 'image' with card_image as img -%}
+              </div>
             {%- endif -%}
           </div>
         </div>
