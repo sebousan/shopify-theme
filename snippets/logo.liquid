@@ -5,7 +5,6 @@
 <a class="logo" href="{{ shop.secure_url }}">
   {%- if logo -%}
     {{ logo_url | image_tag: alt: shop.name }}
-    <img src="{{ logo | img_url }}" alt="{{ shop.name }}">
   {%- else -%}
     {{ shop.name }}
   {%- endif -%}
