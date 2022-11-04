@@ -20,7 +20,11 @@
         {{ form | payment_terms }}
       {%- endform -%}
     </div>
-    <div class="media"></div>
+    <div class="media">
+      {%- for media in p.media -%}
+        {% render 'image', img: media %}
+      {%- endfor -%}
+    </div>
   </div>
 </div>
 
