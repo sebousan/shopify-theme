@@ -1,48 +1,48 @@
 {% liquid 
-  assign title = section.settings.title
   assign text = section.settings.text
-  assign image = section.settings.image
+  assign type = section.settings.type
 %}
 
-<div class="container">
-  <div class="row">
-    <div class="content">
-      {%- if title != blank -%}
-        <h2>{{ title }}</h2>
-      {%- endif -%}
-      {%- if text != blank -%}
-        <p>{{ text }}</p>
-      {%- endif -%}
-    </div>
-    <div class="media">
-      {{ image }}
+{%- if text != blank -%}
+  <div class="container">
+    <div class="alert alert-{{ type }}" role="alert">
+      <p>{{ text }}</p>
     </div>
   </div>
-</div>
+{%- endif -%}
 
 {% schema %}
   {
-    "name": "t:sections.editorial.name",
+    "name": "t:sections.alert.name",
     "tag": "section",
-    "class": "block-editorial",
+    "class": "block-alert",
     "settings": [
       {
         "type": "text",
-        "id": "title",
-        "label": "t:sections.global.title"
+        "id": "text",
+        "label": "t:sections.global.text"
       }, {
-        "type": "richtext",
-        "id": "subtitle",
-        "label": "t:sections.global.subtitle"
-      }, {
-        "type": "image_picker",
-        "id": "image",
-        "label": "t:sections.global.image"
+        "type": "select",
+        "id": "type",
+        "label": "t:sections.global.type",
+        "options": [
+          {
+            "value": "danger",
+            "label": "t:sections.global.danger"
+          }, {
+            "value": "warning",
+            "label": "t:sections.global.warning"
+          }, {
+            "value": "success",
+            "label": "t:sections.global.success"
+          }
+        ],
+        "default": "danger"
       }
     ],
     "presets": [
       {
-        "name": "t:sections.editorial.name"
+        "name": "t:sections.alert.name"
       }
     ]
   }
