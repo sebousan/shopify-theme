@@ -304,8 +304,8 @@
       "title": "Titre de la page"
     },
     "headings": {
-      "title": "Newsletter",
-      "text": "Newsletter"
+      "title": "Titre du bloc",
+      "text": "Texte sous le titre"
     },
     "newsletter": {
       "name": "Newsletter",
