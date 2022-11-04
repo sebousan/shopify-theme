@@ -28,8 +28,8 @@
         data-form-status
         {% endif %}
         required>
-      <button type="submit" class="btn">{{ 'form.subscribe' | t }}</button>
     </div>
+    <button type="submit" class="btn">{{ 'form.subscribe' | t }}</button>
 
     {%- if form.errors contains 'email' -%}
       <span id="{{ formId }}-email-error" class="alert alert-danger">
