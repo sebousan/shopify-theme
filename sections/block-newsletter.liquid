@@ -33,7 +33,7 @@
 
     {%- if form.errors contains 'email' -%}
       <span id="{{ formId }}-email-error" class="alert alert-danger">
-        <span class="visually-hidden">{{ 'general.accessibility.error' | t }}
+        <span class="visually-hidden">{{ 'accessibility.error' | t }}
         </span>
         <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
       </span>
