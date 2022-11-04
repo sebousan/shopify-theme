@@ -1,6 +1,6 @@
-<nav role="navigation" aria-label="{{ menu.name }}">
+<nav role="navigation" aria-label="{{ menu.title }}">
   <ul>
-    {%- for link in menu -%}
+    {%- for link in menu.links -%}
       <li>
         <a href="{{ link.url }}" {% if link.current %}
           class="active"
