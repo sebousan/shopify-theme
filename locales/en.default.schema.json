@@ -6,6 +6,7 @@
       "title": "Block title",
       "subtitle": "Block subtitle",
       "text": "Texte",
+      "type": "Type",
       "background": "Background color",
       "image": "Image"
     },
