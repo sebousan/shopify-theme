@@ -12,10 +12,12 @@
       "name": "Editorial"
     },
     "featured-collections": {
-      "name": "Featured collections"
+      "name": "Featured collections",
+      "collection_list": "Collections"
     },
     "featured-products": {
-      "name": "Featured products"
+      "name": "Featured products",
+      "product_list": "Products"
     },
     "newsletter": {
       "name": "Newsletter"
