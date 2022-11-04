@@ -5,6 +5,7 @@
     "global": {
       "title": "Block title",
       "subtitle": "Block subtitle",
+      "text": "Texte",
       "background": "Background color",
       "image": "Image"
     },
@@ -21,6 +22,9 @@
     },
     "newsletter": {
       "name": "Newsletter"
+    },
+    "quote": {
+      "name": "Quote"
     }
   }
 }

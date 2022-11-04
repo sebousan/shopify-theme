@@ -22,6 +22,9 @@
     },
     "newsletter": {
       "name": "Newsletter"
+    },
+    "quote": {
+      "name": "Citation"
     }
   }
 }
