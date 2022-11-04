@@ -14,6 +14,11 @@
           {{ product.description }}
         </div>
       {%- endif -%}
+      {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+      {%- form 'product', product, id: product_form_installment_id -%}
+        <input type="hidden" name="id" value="{{ p.id }}">
+        {{ form | payment_terms }}
+      {%- endform -%}
     </div>
     <div class="media"></div>
   </div>
