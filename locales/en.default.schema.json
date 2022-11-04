@@ -26,7 +26,7 @@
     },
     "featured-articles": {
       "name": "Featured articles",
-      "article_list": "Articles"
+      "article": "Article"
     },
     "featured-collections": {
       "name": "Featured collections",

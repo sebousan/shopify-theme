@@ -23,11 +23,20 @@
         "type": "richtext",
         "id": "subtite",
         "label": "t:sections.global.subtitle"
-      }, {
-        "type": "product_list",
-        "id": "product_list",
-        "label": "t:sections.featured-articles.article_list",
-        "limit": 4
+      }
+    ],
+    "max_blocks": 5,
+    "blocks": [
+      {
+        "name": "Item",
+        "type": "item",
+        "settings": [
+          {
+            "type": "article",
+            "id": "article",
+            "label": "t:sections.featured-articles.article"
+          }
+        ]
       }
     ],
     "presets": [
