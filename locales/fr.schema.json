@@ -23,6 +23,9 @@
     },
     "register": {
       "name": "Register"
+    },
+    "reset-password": {
+      "name": "Reset password"
     }
   },
   "sections": {
