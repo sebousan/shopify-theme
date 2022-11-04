@@ -32,7 +32,8 @@
       "name": "Newsletter"
     },
     "quote": {
-      "name": "Quote"
+      "name": "Quote",
+      "author": "Author"
     }
   }
 }

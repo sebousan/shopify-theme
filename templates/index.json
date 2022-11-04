@@ -7,6 +7,16 @@
         "text": "<p>texte du bloc editorial<\/p>"
       }
     },
+    "2f789882-795c-4795-b7bf-17444803da34": {
+      "type": "block-featured-collections",
+      "settings": {
+        "title": "Bloc featured collections",
+        "subtitle": "<p>sous titre<\/p>",
+        "collection_list": [
+          "petits-prix"
+        ]
+      }
+    },
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac": {
       "type": "block-featured-products",
       "settings": {
@@ -32,22 +42,20 @@
         "background": false
       }
     },
-    "2f789882-795c-4795-b7bf-17444803da34": {
-      "type": "block-featured-collections",
+    "89128528-1c57-4a89-85d0-ceca399ecc19": {
+      "type": "block-quote",
       "settings": {
-        "title": "Bloc featured collections",
-        "subtitle": "<p>sous titre<\/p>",
-        "collection_list": [
-          "petits-prix"
-        ]
+        "text": "<p>lorem ipsum<\/p>",
+        "author": "author"
       }
     }
   },
   "order": [
     "d8c52d8e-0f18-4282-a408-f477cd9bef8a",
+    "2f789882-795c-4795-b7bf-17444803da34",
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac",
     "bbc10211-779f-471f-84e3-0e3044629e25",
     "e9faa973-6388-4cc2-ab63-b7271c9131a1",
-    "2f789882-795c-4795-b7bf-17444803da34"
+    "89128528-1c57-4a89-85d0-ceca399ecc19"
   ]
 }
