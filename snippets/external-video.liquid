@@ -1,0 +1,8 @@
+{%- liquid
+  assign autoplay = autoplay | default: false
+  assign loop = loop | default: true
+  assign muted = muted | default: true
+  assign controls = controls | default: false
+-%}
+
+{{ video | video_tag: autoplay: autoplay, loop: loop, muted: muted, controls: controls }}
