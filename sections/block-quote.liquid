@@ -1,10 +1,19 @@
 {% liquid 
-  assign title = section.settings.title
   assign text = section.settings.text
-  assign image = section.settings.image
+  assign author = section.settings.author
 %}
 
 <div class="container">
+
+  <figure>
+    <blockquote>
+      <p>{{ text }}</p>
+    </blockquote>
+    <figcaption>
+      <p>{{ author }}</p>
+    </figcaption>
+  </figure>
+
   <div class="row">
     <div class="content">
       {%- if title != blank -%}
