@@ -9,8 +9,10 @@
     "newsletter": {
       "name": "Newsletter",
       "background": "Background color",
-      "title_default": "Subscribe to our newsletter",
-      "subtitle_default": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
+      "default": {
+        "title": "Subscribe to our newsletter",
+        "subtitle": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
+      }
     }
   }
 }
