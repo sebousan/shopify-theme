@@ -2,17 +2,14 @@
   "settings_schema": {
   },
   "sections": {
-    "headings": {
+    "global": {
       "title": "Block title",
-      "subtitle": "Block subtitle"
+      "subtitle": "Block subtitle",
+      "background": "Background color",
+      "image": "Image"
     },
     "newsletter": {
-      "name": "Newsletter",
-      "background": "Background color",
-      "default": {
-        "title": "Subscribe to our newsletter",
-        "subtitle": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
-      }
+      "name": "Newsletter"
     }
   }
 }
