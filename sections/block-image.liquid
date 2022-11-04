@@ -1,0 +1,60 @@
+{% liquid 
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign video = section.settings.video
+  assign size = section.settings.size
+%}
+
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+  <div class="row">
+    <div class="{{ size }}">
+      {{ video | video_tag }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.video.name",
+    "tag": "section",
+    "class": "block-video",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "label": "t:sections.global.text"
+      }, {
+        "type": "video",
+        "id": "video",
+        "label": "t:sections.global.video"
+      }, {
+        "type": "select",
+        "id": "size",
+        "label": "t:sections.global.size",
+        "default": "large",
+        "options": [
+          {
+            "value": "large",
+            "label": "t:sections.global.large"
+          }, {
+            "value": "medium",
+            "label": "t:sections.global.medium"
+          }, {
+            "value": "small",
+            "label": "t:sections.global.small"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.video.name"
+      }
+    ]
+  }
+{% endschema %}
