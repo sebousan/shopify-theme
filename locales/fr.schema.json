@@ -48,6 +48,9 @@
     "newsletter": {
       "name": "Newsletter"
     },
+    "product-recommendations": {
+      "name": "Recommendations de produits"
+    },
     "quote": {
       "name": "Citation",
       "author": "Auteur"
