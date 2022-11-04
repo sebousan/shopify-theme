@@ -1,6 +1,6 @@
 {%- liquid
   assign p = product.selected_or_first_available_variant
-  assign media = p.featured_media
+  assign featured_media = p.featured_media
 
 -%}
 
@@ -21,7 +21,7 @@
       {%- endform -%}
     </div>
     <div class="media">
-      {%- for media in p.media -%}
+      {%- for media in product.media -%}
         {% render 'image', img: media %}
       {%- endfor -%}
     </div>
