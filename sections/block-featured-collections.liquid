@@ -6,16 +6,7 @@
 
 <div class="container">
 
-  {%- if title != blank or text != blank -%}
-    <header class="heading">
-      {%- if title != blank -%}
-        <h2>{{ title }}</h2>
-      {%- endif -%}
-      {%- if text != blank -%}
-        <p>{{ text }}</p>
-      {%- endif -%}
-    </header>
-  {%- endif -%}
+  {% render 'block-heading', title: title, subtitle: subtitle %}
 
   <div class="collections"></div>
 </div>
