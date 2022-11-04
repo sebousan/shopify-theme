@@ -1,3 +1,8 @@
+{% liquid 
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+%}
+
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
   {% for recommendation in recommendations.products %}
