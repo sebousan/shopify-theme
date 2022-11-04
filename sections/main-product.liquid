@@ -40,7 +40,7 @@
     </div>
     <div class="media">
       {%- liquid
-        for media in p.media
+        for media in product.media
           case media.media_type
             when 'video'
               render 'video', video: media
