@@ -1,17 +1,12 @@
 {% liquid 
-  assign text = section.settings.text
-  assign author = section.settings.author
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign video = section.settings.video
 %}
 
 <div class="container">
-  <figure>
-    <blockquote>
-      <p>{{ text }}</p>
-    </blockquote>
-    <figcaption>
-      <p>{{ author }}</p>
-    </figcaption>
-  </figure>
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+  {{ video | video_tag }}
 </div>
 
 {% schema %}
@@ -28,6 +23,10 @@
         "type": "richtext",
         "id": "text",
         "label": "t:sections.global.text"
+      }, {
+        "type": "video",
+        "id": "video",
+        "label": "t:sections.global.video"
       }
     ],
     "presets": [
