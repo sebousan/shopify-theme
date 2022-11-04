@@ -1,0 +1,39 @@
+{% liquid 
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign articles = section.settings.article_list
+%}
+
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.featured-articles.name",
+    "tag": "section",
+    "class": "block-articles",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
+        "type": "richtext",
+        "id": "subtite",
+        "label": "t:sections.global.subtitle"
+      }, {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "t:sections.featured-articles.article_list",
+        "limit": 4
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.featured-articles.name"
+      }
+    ]
+  }
+{% endschema %}
