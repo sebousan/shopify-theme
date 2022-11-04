@@ -1,7 +1,8 @@
 
 <div class="container">
 
-  {%- render 'heading', title: 'sections.cart.title' | t -%}
+  {%- assign title = 'sections.cart.title' | t -%}
+  {%- render 'heading', title: title -%}
 
   {%- if cart != empty -%}
     <form action="{{ routes.cart_url }}" method="post" id="cart">
