@@ -1,9 +1,9 @@
 {%- assign logo = settings.logo -%}
-{%- assign logo_width = settings.logo_width -%}
-{%- assign logo_url = logo | image_url: width: logo_width -%}
 
 <a class="logo" href="{{ shop.secure_url }}">
   {%- if logo -%}
+    {%- assign logo_width = settings.logo_width -%}
+    {%- assign logo_url = logo | image_url: width: logo_width -%}
     {{ logo_url | image_tag: alt: shop.name }}
   {%- else -%}
     {{ shop.name }}
