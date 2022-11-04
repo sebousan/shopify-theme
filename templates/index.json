@@ -3,15 +3,13 @@
     "d8c52d8e-0f18-4282-a408-f477cd9bef8a": {
       "type": "block-editorial",
       "settings": {
-        "title": "Bloc editorial",
-        "text": "<p>Lorem ipsum<\/p>"
+        "title": "Bloc editorial"
       }
     },
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac": {
       "type": "block-featured-products",
       "settings": {
         "title": "Featured products",
-        "text": "<p>Lorem ipsum<\/p>",
         "product_list": [
           "casque-audio",
           "montre-connectee"
@@ -27,8 +25,8 @@
     "e9faa973-6388-4cc2-ab63-b7271c9131a1": {
       "type": "block-newsletter",
       "settings": {
-        "title": "title",
-        "subtitle": "<p>lorem<\/p>",
+        "title": "title newsletter",
+        "subtitle": "<p>sous titre newsletter<\/p>",
         "background": false
       }
     }
