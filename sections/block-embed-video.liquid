@@ -1,19 +1,18 @@
 {% liquid 
   assign title = section.settings.title
   assign subtitle = section.settings.subtitle
-  assign video_title = section.settings.video_title
   assign video = section.settings.video
+  assign video_title = section.settings.video_title
+  if video.type == 'youtube'
+    assign video_src = "https://www.youtube.com/embed/" | append: video.id | append: "?enablejsapi=1"
+  else
+    assign video_src = "https://player.vimeo.com/video/" | append: video.id
+  endif
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
-  {{ video }}
-  {% render 'external-video', video: video  %}
-  {%- if video.type == 'youtube' -%}
-    <iframe src="https://www.youtube.com/embed/{{ video.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_title | escape }}"></iframe>
-  {%- else -%}
-    <iframe src="https://player.vimeo.com/video/{{ video.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_title | escape }}"></iframe>
-  {%- endif -%}
+  <iframe src="{{ video_src }}" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_title | escape }}" loading="lazy"></iframe>
 </div>
 
 {% schema %}
