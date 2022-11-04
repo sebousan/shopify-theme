@@ -59,7 +59,7 @@
     "email": "E-mail",
     "subscribe": "S’enregister",
     "placeholder": {
-      "email": "name@email.com"
+      "email": "nom@email.com"
     }
   },
   "newsletter": {
