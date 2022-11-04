@@ -1,0 +1,92 @@
+{% liquid 
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign column = section.settings.column
+  assign blocks = section.blocks
+%}
+
+<div class="container">
+  {% render 'block-heading', title: title, subtitle: subtitle %}
+
+  {%- if blocks.size > 0 -%}
+    <div class="row row-cols-1 row-cols-md-{{ column }}">
+      {%- for block in blocks -%}
+        {% liquid 
+          assign card_title = block.settings.title
+          assign card_text = block.settings.text
+          assign card_image = block.settings.image
+        %}
+        <div class="col">
+          <div class="card">
+            <div>
+              {% if card_title != blank %}
+                <p class="title">{{ card_title }}</p>
+              {% endif %}
+              {% if card_text != blank %}
+                <p class="text">{{ card_text }}</p>
+              {% endif %}
+            </div>
+            {%- if card_image -%}
+              <div>
+                {%- render 'image' with card_image as img -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.cards.name",
+    "tag": "section",
+    "class": "block-cards",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.global.title"
+      }, {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "t:sections.global.subtitle"
+      }, {
+        "type": "range",
+        "id": "column",
+        "min": 2,
+        "max": 4,
+        "default": 4,
+        "label": "t:sections.global.nb_column"
+      }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "name": "Item",
+        "type": "t:sections.global.item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.global.title"
+          }, {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:sections.global.text"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.global.image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.cards.name"
+      }
+    ]
+  }
+{% endschema %}

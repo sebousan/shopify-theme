@@ -1,16 +1,16 @@
 {% liquid 
   assign title = section.settings.title
   assign subtitle = section.settings.subtitle
-  assign products = section.settings.product_list
+  assign blocks = section.blocks
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
 
-  {%- if products != blank -%}
-    <div class="products">
-      {%- for product in products -%}
-        {% render 'product-item' with product as product_item %}
+  {%- if blocks.size > 0 -%}
+    <div class="row">
+      {%- for block in blocks -%}
+        <div class="col"></div>
       {%- endfor -%}
     </div>
   {%- endif -%}
@@ -18,9 +18,9 @@
 
 {% schema %}
   {
-    "name": "t:sections.featured-products.name",
+    "name": "t:sections.featured-articles.name",
     "tag": "section",
-    "class": "block-products",
+    "class": "block-articles",
     "settings": [
       {
         "type": "text",
@@ -30,16 +30,25 @@
         "type": "richtext",
         "id": "subtitle",
         "label": "t:sections.global.subtitle"
-      }, {
-        "type": "product_list",
-        "id": "product_list",
-        "label": "t:sections.featured-products.product_list",
-        "limit": 4
+      }
+    ],
+    "max_blocks": 5,
+    "blocks": [
+      {
+        "name": "Item",
+        "type": "item",
+        "settings": [
+          {
+            "type": "article",
+            "id": "article",
+            "label": "t:sections.featured-articles.article"
+          }
+        ]
       }
     ],
     "presets": [
       {
-        "name": "t:sections.featured-products.name"
+        "name": "t:sections.featured-articles.name"
       }
     ]
   }

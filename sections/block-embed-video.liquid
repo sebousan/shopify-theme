@@ -1,26 +1,19 @@
 {% liquid 
   assign title = section.settings.title
   assign subtitle = section.settings.subtitle
-  assign products = section.settings.product_list
+  assign url = section.settings.url
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
 
-  {%- if products != blank -%}
-    <div class="products">
-      {%- for product in products -%}
-        {% render 'product-item' with product as product_item %}
-      {%- endfor -%}
-    </div>
-  {%- endif -%}
 </div>
 
 {% schema %}
   {
-    "name": "t:sections.featured-products.name",
+    "name": "t:sections.embed-video.name",
     "tag": "section",
-    "class": "block-products",
+    "class": "block-embed-video",
     "settings": [
       {
         "type": "text",
@@ -31,15 +24,14 @@
         "id": "subtitle",
         "label": "t:sections.global.subtitle"
       }, {
-        "type": "product_list",
-        "id": "product_list",
-        "label": "t:sections.featured-products.product_list",
-        "limit": 4
+        "type": "text",
+        "id": "url",
+        "label": "t:sections.global.url"
       }
     ],
     "presets": [
       {
-        "name": "t:sections.featured-products.name"
+        "name": "t:sections.embed-video.name"
       }
     ]
   }

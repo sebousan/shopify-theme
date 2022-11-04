@@ -6,16 +6,31 @@
       "background": "Couleur d’arrière plan",
       "danger": "Danger",
       "image": "Image",
+      "nb_column": "Nombre de colonne",
       "primary": "Primary",
       "subtitle": "Sous-titre du bloc",
       "success": "Success",
       "text": "Texte",
       "title": "Titre du bloc",
       "type": "Type",
+      "url": "URL",
       "warning": "Warning"
+    },
+    "alert": {
+      "name": "Alerte"
+    },
+    "cards": {
+      "name": "Editorial (Cards)"
     },
     "editorial": {
       "name": "Editorial"
+    },
+    "embed-video": {
+      "name": "Vidéo intégrée (embed)"
+    },
+    "featured-articles": {
+      "name": "Articles sélectionnés",
+      "article": "Article"
     },
     "featured-collections": {
       "name": "Collections sélectionnées",
@@ -29,7 +44,8 @@
       "name": "Newsletter"
     },
     "quote": {
-      "name": "Citation"
+      "name": "Citation",
+      "author": "Auteur"
     }
   }
 }

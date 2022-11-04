@@ -5,6 +5,7 @@
     "global": {
       "background": "Background color",
       "danger": "Danger",
+      "nb_column": "Number of column",
       "image": "Image",
       "primary": "Primary",
       "subtitle": "Block subtitle",
@@ -12,10 +13,24 @@
       "text": "Texte",
       "title": "Block title",
       "type": "Type",
+      "url": "URL",
       "warning": "Warning"
+    },
+    "alert": {
+      "name": "Alert"
+    },
+    "cards": {
+      "name": "Editorial (Cards)"
     },
     "editorial": {
       "name": "Editorial"
+    },
+    "embed-video": {
+      "name": "Embed video"
+    },
+    "featured-articles": {
+      "name": "Featured articles",
+      "article": "Article"
     },
     "featured-collections": {
       "name": "Featured collections",
@@ -29,7 +44,8 @@
       "name": "Newsletter"
     },
     "quote": {
-      "name": "Quote"
+      "name": "Quote",
+      "author": "Author"
     }
   }
 }
