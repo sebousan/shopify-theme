@@ -39,6 +39,8 @@
       "background": "Couleur d’arrière plan",
       "danger": "Danger",
       "image": "Image",
+      "large": "Grand",
+      "medium": "Moyen",
       "nb_column": "Nombre de colonne",
       "primary": "Primary",
       "subtitle": "Sous-titre du bloc",
@@ -46,6 +48,7 @@
       "text": "Texte",
       "title": "Titre du bloc",
       "type": "Type",
+      "small": "Petit",
       "url": "URL",
       "video": "Vidéo",
       "warning": "Warning"
@@ -85,10 +88,7 @@
       "author": "Auteur"
     },
     "video": {
-      "name": "Vidéo",
-      "large": "Grand",
-      "medium": "Moyen",
-      "small": "Petit"
+      "name": "Vidéo"
     }
   }
 }
