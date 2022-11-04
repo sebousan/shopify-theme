@@ -6,6 +6,7 @@
       "background": "Couleur d’arrière plan",
       "danger": "Danger",
       "image": "Image",
+      "nb_column": "Nombre de colonne",
       "primary": "Primary",
       "subtitle": "Sous-titre du bloc",
       "success": "Success",
