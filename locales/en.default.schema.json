@@ -36,13 +36,18 @@
   },
   "sections": {
     "global": {
+      "a11y": "For accessibility",
       "background": "Background color",
       "danger": "Danger",
-      "nb_column": "Number of column",
       "image": "Image",
+      "large": "Large",
+      "medium": "Medium",
+      "nb_column": "Number of column",
       "primary": "Primary",
+      "size": "Size",
+      "small": "Small",
       "subtitle": "Block subtitle",
-      "success": "Succes",
+      "success": "Success",
       "text": "Texte",
       "title": "Block title",
       "type": "Type",
@@ -59,8 +64,9 @@
     "editorial": {
       "name": "Editorial"
     },
-    "embed-video": {
-      "name": "Embed video"
+    "external-video": {
+      "name": "Embed video",
+      "title": "Video title"
     },
     "featured-articles": {
       "name": "Featured articles",
@@ -74,6 +80,9 @@
       "name": "Featured products",
       "product_list": "Products"
     },
+    "image": {
+      "name": "Image"
+    },
     "newsletter": {
       "name": "Newsletter"
     },
@@ -83,6 +92,9 @@
     "quote": {
       "name": "Quote",
       "author": "Author"
+    },
+    "video": {
+      "name": "Video"
     }
   }
 }

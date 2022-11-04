@@ -36,13 +36,18 @@
   },
   "sections": {
     "global": {
+      "a11y": "Pour l’accessibilité",
       "background": "Couleur d’arrière plan",
       "danger": "Danger",
       "image": "Image",
+      "large": "Grand",
+      "medium": "Moyen",
       "nb_column": "Nombre de colonne",
       "primary": "Primary",
+      "size": "Taille",
+      "small": "Petit",
       "subtitle": "Sous-titre du bloc",
-      "success": "Success",
+      "success": "Succès",
       "text": "Texte",
       "title": "Titre du bloc",
       "type": "Type",
@@ -59,8 +64,9 @@
     "editorial": {
       "name": "Editorial"
     },
-    "embed-video": {
-      "name": "Vidéo intégrée (embed)"
+    "external-video": {
+      "name": "Vidéo intégrée (embed)",
+      "title": "Titre de la vidéo"
     },
     "featured-articles": {
       "name": "Articles sélectionnés",
@@ -74,6 +80,9 @@
       "name": "Produits sélectionnées",
       "product_list": "Produits"
     },
+    "image": {
+      "name": "Image"
+    },
     "newsletter": {
       "name": "Newsletter"
     },
@@ -83,6 +92,9 @@
     "quote": {
       "name": "Citation",
       "author": "Auteur"
+    },
+    "video": {
+      "name": "Vidéo"
     }
   }
 }

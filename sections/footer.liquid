@@ -2,14 +2,14 @@
   <div class="container">
     {%- render 'logo' -%}
     {%- if section.settings.menu != blank -%}
-      {% render 'nav', menu: section.settings.menu.links %}
+      {% render 'nav', menu: section.settings.menu %}
     {%- endif -%}
     <hr>
     {%- if section.settings.menu_legal != blank -%}
-      {% render 'nav', menu: section.settings.menu_legal.links %}
+      {% render 'nav', menu: section.settings.menu_legal %}
     {%- endif -%}
     {%- if section.settings.menu_social != blank -%}
-      {% render 'nav', menu: section.settings.menu_social.links %}
+      {% render 'nav', menu: section.settings.menu_social %}
     {%- endif -%}
   </div>
 </footer>

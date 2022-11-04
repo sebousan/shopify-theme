@@ -1,26 +1,32 @@
 {% liquid 
   assign title = section.settings.title
   assign subtitle = section.settings.subtitle
-  assign video = section.settings.video
+  assign image = section.settings.image
   assign size = section.settings.size
+  case size
+    when "medium"
+      assign img_width = 900
+    when "small"
+      assign img_width = 600
+    else
+      assign img_width = 1200
+  endcase
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
-  {%- if video != blank -%}
-    <div class="row">
-      <div class="{{ size }}">
-        {%- render 'video', video: video -%}
-      </div>
+  <div class="row">
+    <div class="{{ size }}">
+      {% render 'image', img: image, width: img_width %}
     </div>
-  {%- endif -%}
+  </div>
 </div>
 
 {% schema %}
   {
-    "name": "t:sections.video.name",
+    "name": "t:sections.image.name",
     "tag": "section",
-    "class": "block-video",
+    "class": "block-image",
     "settings": [
       {
         "type": "text",
@@ -55,7 +61,7 @@
     ],
     "presets": [
       {
-        "name": "t:sections.video.name"
+        "name": "t:sections.image.name"
       }
     ]
   }

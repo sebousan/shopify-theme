@@ -1,0 +1,8 @@
+{%- liquid
+  assign autoplay = autoplay | default: false
+  assign loop = loop | default: true
+  assign muted = muted | default: true
+  assign video_class = video_class | default: false
+-%}
+
+{{ video | external_video_url: autoplay: autoplay, loop: loop | external_video_tag: class: video_class, loading: "lazy" }}

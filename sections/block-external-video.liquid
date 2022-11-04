@@ -2,15 +2,23 @@
   assign title = section.settings.title
   assign subtitle = section.settings.subtitle
   assign video = section.settings.video
-  assign size = section.settings.size
+  assign video_title = section.settings.video_title
+  if video.type == 'youtube'
+    assign video_src = "https://www.youtube.com/embed/" | append: video.id | append: "?enablejsapi=1"
+  else
+    assign video_src = "https://player.vimeo.com/video/" | append: video.id
+  endif
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
+
   {%- if video != blank -%}
     <div class="row">
       <div class="{{ size }}">
-        {%- render 'video', video: video -%}
+        <div class="video">
+          <iframe src="{{ video_src }}" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_title | escape }}" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   {%- endif -%}
@@ -18,22 +26,33 @@
 
 {% schema %}
   {
-    "name": "t:sections.video.name",
+    "name": "t:sections.external-video.name",
     "tag": "section",
-    "class": "block-video",
+    "class": "block-external-video",
     "settings": [
       {
         "type": "text",
         "id": "title",
         "label": "t:sections.global.title"
-      }, {
+      },
+      {
         "type": "richtext",
-        "id": "text",
-        "label": "t:sections.global.text"
-      }, {
-        "type": "video",
+        "id": "subtitle",
+        "label": "t:sections.global.subtitle"
+      },
+      {
+        "type": "video_url",
         "id": "video",
-        "label": "t:sections.global.video"
+        "accept": [
+          "youtube", "vimeo"
+        ],
+        "label": "t:sections.global.url"
+      },
+      {
+        "type": "text",
+        "id": "video_title",
+        "label": "t:sections.external-video.title",
+        "info": "t:sections.global.a11y"
       }, {
         "type": "select",
         "id": "size",
@@ -55,7 +74,7 @@
     ],
     "presets": [
       {
-        "name": "t:sections.video.name"
+        "name": "t:sections.external-video.name"
       }
     ]
   }
