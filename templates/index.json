@@ -4,14 +4,60 @@
       "type": "block-editorial",
       "settings": {
         "title": "Bloc editorial",
-        "text": "<p>Lorem ipsum<\/p>"
+        "text": "<p>texte du bloc editorial<\/p>"
+      }
+    },
+    "2a78cd5e-ff22-488a-a02f-4c4ec824ca51": {
+      "type": "block-cards",
+      "blocks": {
+        "d6b866b4-5782-40c2-8679-77ab510beabd": {
+          "type": "t:sections.global.item",
+          "settings": {
+            "title": "Card 1",
+            "text": "<p>Lorem ipsum<\/p>"
+          }
+        },
+        "8f00568f-8b13-4dc5-aa9d-65cfbccde578": {
+          "type": "t:sections.global.item",
+          "settings": {
+            "title": "Card 2",
+            "text": "<p>{{ shop.brand.short_description }}<\/p>",
+            "image": "shopify:\/\/shop_images\/default-avatar-300x300.png"
+          }
+        }
+      },
+      "block_order": [
+        "d6b866b4-5782-40c2-8679-77ab510beabd",
+        "8f00568f-8b13-4dc5-aa9d-65cfbccde578"
+      ],
+      "settings": {
+        "title": "Bloc cards",
+        "subtitle": "<p>Lorem ipsum<\/p>",
+        "column": 4
+      }
+    },
+    "2f789882-795c-4795-b7bf-17444803da34": {
+      "type": "block-featured-collections",
+      "settings": {
+        "title": "Bloc featured collections",
+        "subtitle": "<p>sous titre<\/p>",
+        "collection_list": [
+          "petits-prix"
+        ]
+      }
+    },
+    "89128528-1c57-4a89-85d0-ceca399ecc19": {
+      "type": "block-quote",
+      "settings": {
+        "text": "<p>Citation lorem ipsum<\/p>",
+        "author": "author"
       }
     },
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac": {
       "type": "block-featured-products",
       "settings": {
-        "title": "Featured products",
-        "text": "<p>Lorem ipsum<\/p>",
+        "title": "Bloc featured products",
+        "subtitle": "<p>sous-titre<\/p>",
         "product_list": [
           "casque-audio",
           "montre-connectee"
@@ -27,16 +73,38 @@
     "e9faa973-6388-4cc2-ab63-b7271c9131a1": {
       "type": "block-newsletter",
       "settings": {
-        "title": "title",
-        "subtitle": "<p>lorem<\/p>",
+        "title": "Bloc newsletter",
+        "subtitle": "<p>sous titre newsletter<\/p>",
         "background": false
+      }
+    },
+    "ba91bb78-28cf-4bc7-bafa-a54c6ca3084b": {
+      "type": "block-featured-articles",
+      "blocks": {
+        "92be640e-5a65-4ca2-9a1c-b727ff654e68": {
+          "type": "item",
+          "settings": {
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "92be640e-5a65-4ca2-9a1c-b727ff654e68"
+      ],
+      "settings": {
+        "title": "Bloc featured articles",
+        "subtitle": "<p>sous-titre<\/p>"
       }
     }
   },
   "order": [
     "d8c52d8e-0f18-4282-a408-f477cd9bef8a",
+    "2a78cd5e-ff22-488a-a02f-4c4ec824ca51",
+    "2f789882-795c-4795-b7bf-17444803da34",
+    "89128528-1c57-4a89-85d0-ceca399ecc19",
     "0f9543c1-ad00-44f6-8e27-e4cb3811a5ac",
     "bbc10211-779f-471f-84e3-0e3044629e25",
-    "e9faa973-6388-4cc2-ab63-b7271c9131a1"
+    "e9faa973-6388-4cc2-ab63-b7271c9131a1",
+    "ba91bb78-28cf-4bc7-bafa-a54c6ca3084b"
   ]
 }
