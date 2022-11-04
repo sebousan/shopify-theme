@@ -22,7 +22,9 @@
     </div>
     <div class="media">
       {%- for media in p.media -%}
-        {% render 'image', img: media %}
+        {% if media.media_type == 'image' %}
+          {% render 'image', img: media %}
+        {% endif %}
       {%- endfor -%}
     </div>
   </div>
