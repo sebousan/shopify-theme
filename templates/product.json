@@ -11,10 +11,18 @@
         "title": "Recommandations",
         "subtitle": "lorem ipsum"
       }
+    },
+    "c7eab241-9ba2-41bc-ae52-19ade89e10bf": {
+      "type": "block-embed-video",
+      "settings": {
+        "title": "video",
+        "subtitle": ""
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "c7eab241-9ba2-41bc-ae52-19ade89e10bf"
   ]
 }
