@@ -2,6 +2,9 @@
   "settings_schema": {
   },
   "main": {
+    "collection": {
+      "product-grid": "Grille produits"
+    },
     "product": {
       "name": "Fiche produit"
     }
