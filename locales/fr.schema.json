@@ -5,6 +5,7 @@
     "collection": {
       "product-grid": "Grille produits"
     },
+    "name": "Contenu principal",
     "product": {
       "name": "Fiche produit"
     }
