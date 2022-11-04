@@ -295,6 +295,16 @@
     },
     "page": {
       "title": "Page title"
+    },
+    "headings": {
+      "title": "Block title",
+      "text": "text under title"
+    },
+    "newsletter": {
+      "name": "Newsletter",
+      "background": "Background color",
+      "title_default": "S’inscrire à la newsletter",
+      "text_default": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
     }
   },
   "localization": {
