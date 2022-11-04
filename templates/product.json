@@ -18,7 +18,7 @@
         "title": "Bloc video external",
         "subtitle": "",
         "video": "https:\/\/www.youtube.com\/watch?v=EGgflfoYG4g",
-        "video_title": "",
+        "video_title": "title",
         "size": "large"
       }
     }
