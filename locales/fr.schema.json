@@ -36,6 +36,7 @@
   },
   "sections": {
     "global": {
+      "a11y": "Pour l’accessibilité",
       "background": "Couleur d’arrière plan",
       "danger": "Danger",
       "image": "Image",
@@ -62,8 +63,9 @@
     "editorial": {
       "name": "Editorial"
     },
-    "embed-video": {
-      "name": "Vidéo intégrée (embed)"
+    "external-video": {
+      "name": "Vidéo intégrée (embed)",
+      "title": "Titre de la vidéo"
     },
     "featured-articles": {
       "name": "Articles sélectionnés",
