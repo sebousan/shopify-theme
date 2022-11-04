@@ -85,7 +85,10 @@
       "author": "Auteur"
     },
     "video": {
-      "name": "Video"
+      "name": "Vidéo",
+      "large": "Grand",
+      "medium": "Moyen",
+      "small": "Petit"
     }
   }
 }
