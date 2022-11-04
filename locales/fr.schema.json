@@ -11,6 +11,9 @@
     "address": {
       "name": "Address"
     },
+    "cart": {
+      "name": "Panier"
+    },
     "collection": {
       "product-grid": "Grille produits"
     },
