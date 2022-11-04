@@ -1,12 +1,14 @@
-<nav role="navigation">
+<nav role="navigation" aria-label="{{ menu.title }}">
   <ul>
-    {%- for link in menu -%}
-      <a href="{{ link.url }}" {% if link.current %}
-        class="active"
-        aria-current="page"
-        {% endif %}>
-        {{ link.title | escape }}
-      </a>
+    {%- for link in menu.links -%}
+      <li>
+        <a href="{{ link.url }}" {% if link.current %}
+          class="active"
+          aria-current="page"
+          {% endif %}>
+          {{- link.title | escape -}}
+        </a>
+      </li>
     {%- endfor -%}
   </ul>
 </nav>
