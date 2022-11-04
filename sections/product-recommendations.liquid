@@ -1,14 +1,15 @@
-{% liquid 
-  assign title = section.settings.title
-  assign subtitle = section.settings.subtitle
-%}
-
-<div class="container">
-  {% render 'block-heading', title: title, subtitle: subtitle %}
-  {% for recommendation in recommendations.products %}
-    {%- render 'product-item' with recommendation as product_item -%}
-  {% endfor %}
-</div>
+{% if recommendations.performed and recommendations.products_count > 0 %}
+  {% liquid 
+    assign title = section.settings.title
+    assign subtitle = section.settings.subtitle
+  %}
+  <div class="container">
+    {% render 'block-heading', title: title, subtitle: subtitle %}
+    {% for recommendation in recommendations.products %}
+      {%- render 'product-item' with recommendation as product_item -%}
+    {% endfor %}
+  </div>
+{% endif %}
 
 {% schema %}
   {
