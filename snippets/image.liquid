@@ -1,3 +1,19 @@
+{% comment %}
+  Renders image with srcset and picture
+
+  Accepts:
+  - img: {Object} Image object
+  - img_class: {string} Class for img tag (optional)
+  - picture_class: {string} Class for picture tag (optional)
+
+  Usage:
+  {% render 'product-media',
+  media: media,
+  loop: section.settings.enable_video_looping,
+  variant_image: true
+  %}
+{% endcomment %}
+
 {%- liquid
   assign src = img.preview_image
   assign crop = crop | default: 'center'
