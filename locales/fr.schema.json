@@ -14,6 +14,9 @@
       "type": "Type",
       "warning": "Warning"
     },
+    "alert": {
+      "name": "Alerte"
+    },
     "editorial": {
       "name": "Editorial"
     },
