@@ -3,14 +3,14 @@
 
   Accepts:
   - img: {Object} Image object
+  - width: {Int} Width image in pixel in desktop (optional)
+  - mobile_width: {Int} Width image in pixel in mobile (optional)
+  - crop: {string} Crop direction, center by default (optional)
   - img_class: {string} Class for img tag (optional)
   - picture_class: {string} Class for picture tag (optional)
 
   Usage:
-  {% render 'product-media',
-  media: media,
-  loop: section.settings.enable_video_looping,
-  variant_image: true
+  {% render 'image', width: 600, img_class: "img-fluid"
   %}
 {% endcomment %}
 
@@ -18,9 +18,9 @@
   assign src = img.preview_image
   assign crop = crop | default: 'center'
   assign lazy = lazy | default: true
+  assign ratio = ratio | default: src.aspect_ratio
   assign img_class = img_class | default: false
   assign picture_class = picture_class | default: false
-  assign ratio = ratio | default: src.aspect_ratio
 
   assign width = width | default: 450
   assign height = width | divided_by: ratio | ceil
