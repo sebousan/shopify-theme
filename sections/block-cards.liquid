@@ -1,6 +1,7 @@
 {% liquid 
   assign title = section.settings.title
   assign text = section.settings.text
+  assign column = section.settings.column
   assign blocks = section.blocks
 %}
 
@@ -8,7 +9,7 @@
   {% render 'block-heading', title: title, subtitle: subtitle %}
 
   {%- if blocks.size > 0 -%}
-    <div class="row">
+    <div class="row row-cols-1 row-cols-md-">
       {%- for block in blocks -%}
         {% liquid 
           assign title = block.settings.title
