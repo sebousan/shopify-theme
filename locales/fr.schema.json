@@ -8,6 +8,9 @@
       "background": "Couleur d’arrière plan",
       "image": "Image"
     },
+    "editorial": {
+      "name": "Editorial"
+    },
     "newsletter": {
       "name": "Newsletter"
     }
