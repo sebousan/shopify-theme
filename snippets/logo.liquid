@@ -1,10 +1,11 @@
 {%- assign logo = settings.logo -%}
+{%- assign name = shop.name -%}
 
 <a class="logo" href="{{ shop.secure_url }}">
   {%- if logo -%}
     {%- assign logo_width = settings.logo_width -%}
-    {{- logo | image_url: width: logo_width | image_tag: alt: shop.name -}}
+    {{- logo | image_url: width: logo_width | image_tag: alt: name -}}
   {%- else -%}
-    {{ shop.name }}
+    {{ name }}
   {%- endif -%}
 </a>
