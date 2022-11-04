@@ -11,7 +11,7 @@
       "type": "block-featured-products",
       "settings": {
         "title": "Featured products",
-        "subtite": "",
+        "subtite": "<p>sous titre du bloc<\/p>",
         "product_list": [
           "casque-audio",
           "montre-connectee"
