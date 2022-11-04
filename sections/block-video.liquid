@@ -2,11 +2,16 @@
   assign title = section.settings.title
   assign subtitle = section.settings.subtitle
   assign video = section.settings.video
+  assign size = section.settings.size
 %}
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
-  {{ video | video_tag }}
+  <div class="row">
+    <div class="{{ size }}">
+      {{ video | video_tag }}
+    </div>
+  </div>
 </div>
 
 {% schema %}
