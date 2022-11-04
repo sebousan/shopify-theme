@@ -9,8 +9,10 @@
     "newsletter": {
       "name": "Newsletter",
       "background": "Couleur d’arrière plan",
-      "title_default": "S’inscrire à la newsletter",
-      "subtitle_default": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.<\/p>"
+      "default": {
+        "title": "S’inscrire à la newsletter",
+        "subtitle": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.<\/p>"
+      }
     }
   }
 }
