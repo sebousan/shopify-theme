@@ -6,6 +6,17 @@
 <header role="banner">
   <div class="container">
     {%- render 'logo' -%}
+    {%- if shop.customer_accounts_enabled -%}
+      <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
+        {%- liquid
+          if customer
+            echo 'customer.account_fallback' | t
+          else
+            echo 'customer.log_in' | t
+          endif
+        -%}
+      </a>
+    {%- endif -%}
     {%- if section.settings.menu != blank -%}
       {% render 'nav', menu: section.settings.menu %}
     {%- endif -%}
