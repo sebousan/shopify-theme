@@ -12,7 +12,9 @@
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
-  <iframe src="{{ video_src }}" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_title | escape }}" loading="lazy"></iframe>
+  <div class="video">
+    <iframe src="{{ video_src }}" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_title | escape }}" loading="lazy"></iframe>
+  </div>
 </div>
 
 {% schema %}
