@@ -1,6 +1,59 @@
+{%- liquid
+  assign p = product.selected_or_first_available_variant
+-%}
+
+<div class="container">
+  <div class="row">
+    <div class="content">
+      <h1>{{ product.title | escape }}</h1>
+      {%- render 'price', product: product, use_variant: true, show_badges: true -%}
+      {%- if product.description != blank -%}
+        <div class="description rte">
+          {{ product.description }}
+        </div>
+      {%- endif -%}
+      {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+      {%- form 'product', product, id: product_form_installment_id -%}
+        <input type="hidden" name="id" value="{{ p.id }}">
+        {{ form | payment_terms }}
+        {{ form | payment_button }}
+
+        {%- unless product.has_only_default_variant -%}
+          {%- for option in product.options_with_values -%}
+            <fieldset>
+              <legend>{{ option.name }}</legend>
+              {%- for value in option.values -%}
+                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                  {{- value -}}
+                </label>
+                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %}>
+              {%- endfor -%}
+            </fieldset>
+          {%- endfor -%}
+        {%- endunless -%}
+
+      {%- endform -%}
+
+      {% for type in shop.enabled_payment_types %}
+        <img src="{{ type | payment_type_img_url }}" alt="">
+      {% endfor %}
+    </div>
+    <div class="media">
+      {%- liquid
+        case media.media_type
+          when 'video'
+            render 'video', video: media
+          else
+            render 'image', img: media
+        endcase
+      -%}
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "t:sections.main-product.name",
+    "name": "t:main.product.name",
     "tag": "section"
   }
 {% endschema %}
