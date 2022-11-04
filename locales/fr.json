@@ -302,16 +302,6 @@
     },
     "page": {
       "title": "Titre de la page"
-    },
-    "headings": {
-      "title": "Titre du bloc",
-      "subtitle": "Sous-titre du bloc"
-    },
-    "newsletter": {
-      "name": "Newsletter",
-      "background": "Couleur d’arrière plan",
-      "title_default": "S’inscrire à la newsletter",
-      "subtitle_default": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.<\/p>"
     }
   },
   "localization": {
