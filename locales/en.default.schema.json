@@ -36,6 +36,7 @@
   },
   "sections": {
     "global": {
+      "a11y": "For accessibility",
       "background": "Background color",
       "danger": "Danger",
       "image": "Image",
