@@ -3,12 +3,15 @@
   },
   "sections": {
     "global": {
-      "title": "Titre du bloc",
-      "subtitle": "Sous-titre du bloc",
-      "text": "Texte",
-      "type": "Type",
       "background": "Couleur d’arrière plan",
-      "image": "Image"
+      "danger": "Danger",
+      "image": "Image",
+      "subtitle": "Sous-titre du bloc",
+      "success": "Success",
+      "text": "Texte",
+      "title": "Titre du bloc",
+      "type": "Type",
+      "warning": "Warning"
     },
     "editorial": {
       "name": "Editorial"
