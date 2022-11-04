@@ -1,10 +1,19 @@
 {
   "current": {
+    "logo": "shopify:\/\/shop_images\/Carruades_de_Lafite_SM_Vinco.png",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
           "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "menu": "",
+          "menu_legal": "",
+          "menu_social": ""
         }
       }
     },
