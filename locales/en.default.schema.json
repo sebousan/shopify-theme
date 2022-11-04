@@ -64,7 +64,8 @@
       "name": "Editorial"
     },
     "external-video": {
-      "name": "Embed video"
+      "name": "Embed video",
+      "title": "Video title"
     },
     "featured-articles": {
       "name": "Featured articles",
