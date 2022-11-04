@@ -14,6 +14,12 @@
         "type": "image_picker",
         "id": "logo",
         "label": "Logo"
+      },
+      {
+        "type": "number",
+        "id": "logo_width",
+        "label": "Largeur du logo",
+        "default": 150
       }
     ]
   },
