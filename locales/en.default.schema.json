@@ -25,7 +25,8 @@
       "name": "Embed video"
     },
     "featured-articles": {
-      "name": "Featured articles"
+      "name": "Featured articles",
+      "article_list": "Articles"
     },
     "featured-collections": {
       "name": "Featured collections",
