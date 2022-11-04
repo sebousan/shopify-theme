@@ -16,7 +16,8 @@
       "type": "block-embed-video",
       "settings": {
         "title": "video",
-        "subtitle": ""
+        "subtitle": "",
+        "video": "https:\/\/www.youtube.com\/watch?v=HLuruFNhYyw"
       }
     }
   },

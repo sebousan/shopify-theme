@@ -6,7 +6,7 @@
 
 <div class="container">
   {% render 'block-heading', title: title, subtitle: subtitle %}
-  {{ video }}
+  {{ video | video_url }}
 </div>
 
 {% schema %}
