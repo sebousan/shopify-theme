@@ -40,12 +40,14 @@
     </div>
     <div class="media">
       {%- liquid
-        case p.media.media_type
-          when 'video'
-            render 'video', video: media
-          else
-            render 'image', img: media
-        endcase
+        for media in p.media
+          case media.media_type
+            when 'video'
+              render 'video', video: media
+            else
+              render 'image', img: media
+          endcase
+        endfor
       -%}
     </div>
   </div>
