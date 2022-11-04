@@ -5,6 +5,7 @@
     "global": {
       "title": "Titre du bloc",
       "subtitle": "Sous-titre du bloc",
+      "text": "Texte",
       "background": "Couleur d’arrière plan",
       "image": "Image"
     },
