@@ -1,20 +1,4 @@
-{{ 'customer.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<div class="customer login section-{{ section.id }}-padding">
+<div class="container">
   <h1 id="recover">{{ 'customer.recover_password.title' | t }}</h1>
   <div>
     <p>{{ 'customer.recover_password.subtext' | t }}</p>
@@ -132,6 +116,7 @@
 {% schema %}
   {
     "name": "t:main.login.name",
+    "class": "login-register",
     "tag": "section"
   }
 {% endschema %}
