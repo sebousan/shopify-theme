@@ -1,0 +1,22 @@
+{%- liquid
+  assign c = collection_item
+  assign media = c.featured_media 
+  assign media_width = 300
+-%}
+<article class="collection">
+  <div class="content">
+    <p class="title">
+      <a href="{{ c.url }}">{{ c.title | escape }}</a>
+    </p>
+    <p class="description">{{ c.description | escape }}</p>
+  </div>
+  {%- if media -%}
+    <div class="media">
+      {%- if media.media_type == 'image' -%}
+        {%- render 'image', img: media, width: media_width -%}
+      {%- elsif media.media_type == 'video' -%}
+        {%- render 'video', video: media, width: media_width -%}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</article>
