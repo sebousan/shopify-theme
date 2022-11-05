@@ -32,6 +32,8 @@
           {%- endfor -%}
         {%- endunless -%}
 
+        <input class="quantity__input" type="number" name="quantity" id="Quantity-{{ section.id }}" min="1" value="1" form="{{ product_form_id }}">
+
       {%- endform -%}
 
       {% for type in shop.enabled_payment_types %}
