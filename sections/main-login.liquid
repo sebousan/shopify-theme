@@ -58,13 +58,15 @@
         {%- endform -%}
       </div>
 
-      <div>
-        <hr>
-        <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
-        {%- form 'guest_login' -%}
-          <button>{{ 'customer.login_page.guest_continue' | t }}</button>
-        {%- endform -%}
-      </div>
+      {%- if shop.checkout.guest_login -%}
+        <div>
+          <hr>
+          <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+          {%- form 'guest_login' -%}
+            <button>{{ 'customer.login_page.guest_continue' | t }}</button>
+          {%- endform -%}
+        </div>
+      {%- endif -%}
 
       <h1 id="recover">{{ 'customer.recover_password.title' | t }}</h1>
       <div>
