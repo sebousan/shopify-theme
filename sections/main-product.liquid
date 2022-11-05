@@ -37,6 +37,19 @@
           <input type="number" name="quantity" id="Quantity-{{ section.id }}" min="1" value="1">
         </div>
 
+        <button type="submit" name="add" class="btn {% if block.settings.show_dynamic_checkout %}btn-secondary{% else %}btn-primary{% endif %}"
+          {% if product.selected_or_first_available_variant.available == false %}
+          disabled
+          {% endif %}>
+          <span>
+            {%- if product.selected_or_first_available_variant.available -%}
+              {{ 'products.product.add_to_cart' | t }}
+            {%- else -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- endif -%}
+          </span>
+        </button>
+
       {%- endform -%}
 
       {% for type in shop.enabled_payment_types %}
