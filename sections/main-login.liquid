@@ -14,7 +14,7 @@
           aria-describedby="RecoverEmail-email-error"
           autofocus
           {% endif %}
-          placeholder="{{ 'customer.login_page.email' | t }}">
+          placeholder="{{ 'customer.login_page.email' | t }}" required>
         {%- if form.errors -%}
           <small id="RecoverEmail-email-error" class="invalid-feedback">
             {{- form.errors.messages['form'] -}}
