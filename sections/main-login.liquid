@@ -16,9 +16,9 @@
           {% endif %}
           placeholder="{{ 'customer.login_page.email' | t }}" required>
         {%- if form.errors -%}
-          <small id="RecoverEmail-email-error" class="invalid-feedback">
+          <p id="RecoverEmail-email-error" class="invalid-feedback">
             {{- form.errors.messages['form'] -}}
-          </small>
+          </p>
         {%- endif -%}
       </div>
 
