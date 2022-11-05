@@ -16,7 +16,6 @@
       {%- form 'product', product, id: product_form_installment_id -%}
         <input type="hidden" name="id" value="{{ p.id }}">
         {{ form | payment_terms }}
-        {{ form | payment_button }}
 
         {%- unless product.has_only_default_variant -%}
           {%- for option in product.options_with_values -%}
@@ -31,6 +30,26 @@
             </fieldset>
           {%- endfor -%}
         {%- endunless -%}
+
+        <div class="field">
+          <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity.label' | t }}</label>
+          <input type="number" name="quantity" id="Quantity-{{ section.id }}" min="1" value="1">
+        </div>
+
+        <button type="submit" name="add" class="btn {% if block.settings.show_dynamic_checkout %}btn-secondary{% else %}btn-primary{% endif %}"
+          {% if product.selected_or_first_available_variant.available == false %}
+          disabled
+          {% endif %}>
+          <span>
+            {%- if product.selected_or_first_available_variant.available -%}
+              {{ 'products.product.add_to_cart' | t }}
+            {%- else -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- endif -%}
+          </span>
+        </button>
+
+        {{ form | payment_button }}
 
       {%- endform -%}
 
