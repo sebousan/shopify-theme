@@ -12,34 +12,33 @@
         {%- form 'customer_login', novalidate: 'novalidate' -%}
           {%- if form.errors -%}
             <h2 class="form__message" tabindex="-1" autofocus>
-              <span class="visually-hidden">{{ 'accessibility.error' | t }}
-              </span>
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
               {{ 'templates.contact.form.error_heading' | t }}
             </h2>
             {{ form.errors | default_errors }}
           {%- endif -%}
 
           <div class="field">
+            <label for="CustomerEmail">
+              {{ 'customer.login_page.email' | t }}
+            </label>
             <input type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off"
               {% if form.errors contains 'form' %}
               aria-invalid="true"
               {% endif %}
               placeholder="{{ 'customer.login_page.email' | t }}">
-            <label for="CustomerEmail">
-              {{ 'customer.login_page.email' | t }}
-            </label>
           </div>
 
           {%- if form.password_needed -%}
             <div class="field">
+              <label for="CustomerPassword">
+                {{ 'customer.login_page.password' | t }}
+              </label>
               <input type="password" value="" name="customer[password]" id="CustomerPassword" autocomplete="current-password"
                 {% if form.errors contains 'form' %}
                 aria-invalid="true"
                 {% endif %}
                 placeholder="{{ 'customer.login_page.password' | t }}">
-              <label for="CustomerPassword">
-                {{ 'customer.login_page.password' | t }}
-              </label>
             </div>
 
             <a href="#recover">
