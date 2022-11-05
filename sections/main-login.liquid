@@ -11,11 +11,10 @@
         {%- endif -%}
         {%- form 'customer_login', novalidate: 'novalidate' -%}
           {%- if form.errors -%}
-            <h2 class="form__message" tabindex="-1" autofocus>
-              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-              {{ 'templates.contact.form.error_heading' | t }}
-            </h2>
-            {{ form.errors | default_errors }}
+            <div class="alert alert-danger" role="alert">
+              <p class="alert-heading">{{ 'templates.contact.form.error_heading' | t }}</p>
+              {{ form.errors | default_errors }}
+            </div>
           {%- endif -%}
 
           <div class="field">
