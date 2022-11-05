@@ -12,7 +12,8 @@
         {%- form 'customer_login', novalidate: 'novalidate' -%}
           {%- if form.errors -%}
             <div class="alert alert-danger" role="alert">
-              <p class="alert-heading">{{ 'accessibility.error' | t }} {{ 'templates.contact.form.error_heading' | t }}</p>
+              <p class="alert-heading">{{ 'accessibility.error' | t }}</p>
+              <p>{{ 'templates.contact.form.error_heading' | t }}</p>
               {{ form.errors | default_errors }}
             </div>
 
