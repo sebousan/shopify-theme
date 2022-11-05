@@ -32,7 +32,10 @@
           {%- endfor -%}
         {%- endunless -%}
 
-        <input class="quantity__input" type="number" name="quantity" id="Quantity-{{ section.id }}" min="1" value="1" form="{{ product_form_id }}">
+        <div class="field">
+          <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity.label' | t }}</label>
+          <input type="number" name="quantity" id="Quantity-{{ section.id }}" min="1" value="1">
+        </div>
 
       {%- endform -%}
 
